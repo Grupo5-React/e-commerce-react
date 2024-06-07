@@ -1,34 +1,37 @@
-import { useEffect, useState } from "react";
-import { FaUser, FaLock } from "react-icons/fa";
-import "./Login.css";
-import api from "../../api/api";
+
+
+import { useState } from 'react';
+import { FaUser, FaLock } from 'react-icons/fa';
+import './Login.css';
+import { api } from '../../api/api';
 
 const Login = () => {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [usuarios, setUsuarios] = useState('');
 
-  useEffect(()=>{
-    getUsuarios();
-  },[])
-
-  const getUsuarios = async ()=>{
+  const getUsuarios = async () => {
     const response = await api().get('/users');
     setUsuarios(response.data);
-  }
-
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log('Dados de Login:', { username, password });
   };
 
-  const handleVerificacao = () =>{
-   if(!usuarios.find((usuario)=>(usuario.email == username && usuario.senha == password))){
-      alert("Usuário ou senha incorretos!!")
+  const handleVerificacao = () => {
+    getUsuarios();
+    if (
+      !usuarios.find(
+        (usuario) => usuario.nome == username && usuario.senha == password,
+      )
+    ) {
+      alert('Usuário ou senha incorretos!!');
       return;
-   }
-   alert("Login realizado com sucesso");
-  }
+    }
+    alert('Login realizado com sucesso');
+  };
 
   return (
 
@@ -73,6 +76,7 @@ const Login = () => {
         </form>
       </div>
     </section>   
+
   );
 };
 

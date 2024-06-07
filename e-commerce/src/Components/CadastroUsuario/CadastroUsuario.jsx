@@ -1,15 +1,20 @@
+
 import { useEffect, useState } from "react";
 import "./CadastroUsuario.css"
 import Botao from "../Buttons/Buttons";
 import Form from "../Forms/forms";
-import api from "../../api/api";
+import { api } from '../../api/api';
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-const CadastroUsuario = ()=>{
-     const [nome, setNome] = useState('');
-     const [email, setEmail] = useState('');
-     const [senha, setSenha] = useState('');
-     const [usuarios, setUsuarios] = useState([]);
+
+
+
+const CadastroUsuario = () => {
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [usuarios, setUsuarios] = useState([]);
+
 
      const history = useHistory()
 
@@ -24,18 +29,21 @@ const CadastroUsuario = ()=>{
         getAll();
      },[email])
 
-     const getAll = async()=>{
-        const response = await api().get('/users');
-        setUsuarios(response.data)
-     }
+ 
 
+  const getAll = async () => {
+    const response = await api.get('/users');
+    setUsuarios(response.data);
+  };
 
-    const handleNome=(e)=>{
-         setNome(e.target.value);
-     }
-    const handleEmail=(e)=>{
-        setEmail(e.target.value);
-    }
+  const handleNome = (e) => {
+    setNome(e.target.value);
+  };
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  
     const handleSenha=(e)=>{
         setSenha(e.target.value);
     }
@@ -71,4 +79,5 @@ const CadastroUsuario = ()=>{
         </>
     )
 }
+
 export default CadastroUsuario;

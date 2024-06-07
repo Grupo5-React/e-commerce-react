@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Produto from './Pages/Produto';
 import { api } from './api/api';
+import {FaUser, FaLock} from 'react-icons/fa'
+import Login from './Components/Login/Login'
+import CadastroUsuario from './Components/CadastroUsuario/CadastroUsuario.jsx'
 
 function App() {
   const [dados, setDados] = useState([]);
@@ -27,6 +30,9 @@ function App() {
 
   return (
     <>
+      <div className='App'>
+      <Login/>
+    </div>
       <input type="text" ref={inputRef} />
       <button onClick={handleClick}>Pesquisar</button>
       {pesquisa

@@ -1,0 +1,47 @@
+{
+  "users": [
+    {
+      "id": "8b15",
+      "nome": "Antonio",
+      "email": "antonio@email.com",
+      "senha": "123456"
+    }
+  ],
+  "produto": [
+    {
+      "id": "1",
+      "imgUrl": "https://m.media-amazon.com/images/I/61WrR7z-pGL.__AC_SX300_SY300_QL70_ML2_.jpg",
+      "nome": "Mouse",
+      "descricao": "Um mouse top",
+      "preco": 100,
+      "categoria": "eletronico",
+      "quantidade": 25
+    },
+    {
+      "id": "2",
+      "imgUrl": "https://m.media-amazon.com/images/I/51XqOl8BEQL.__AC_SX300_SY300_QL70_ML2_.jpg",
+      "nome": "Teclado",
+      "descricao": "Um teclado top",
+      "preco": 100,
+      "categoria": "eletronico",
+      "quantidade": 25
+    }
+  ],
+  "pedido": [
+    {
+      "id": "1",
+      "valorTotal": 200,
+      "idUser": "8b15",
+      "itens": [
+        {
+          "idProduto": "1",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "2",
+          "quantidade": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,35 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useRef, useState } from 'react';
+import './App.css';
+import Produto from './Pages/Produto';
+import { api } from './api/api';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [dados, setDados] = useState([]);
+  const [pesquisa, setPesquisa] = useState('');
+  const inputRef = useRef();
+
+  useEffect(() => {
+    getAll();
+  }, []);
+
+  async function getAll() {
+    const response = await api.get('/produto');
+    const produtoFiltrado = response.data.filter(
+      (produto) => produto.quantidade > 0,
+    );
+    setDados(produtoFiltrado);
+  }
+
+  function handleClick() {
+    setPesquisa(inputRef.current.value);
+  }
+  //
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <input type="text" ref={inputRef} />
+      <button onClick={handleClick}>Pesquisar</button>
+      {pesquisa
+        ? dados
+            .filter((produto) => produto.nome.startsWith(pesquisa))
+            .map((dado) => (
+              <Produto
+                key={dado.id}
+                img={dado.imgUrl}
+                nome={dado.nome}
+                descricao={dado.descricao}
+                preco={dado.preco}
+                categoria={dado.ategoria}
+                quantidade={dado.quantidade}
+              />
+            ))
+        : dados.map((dado) => (
+            <Produto
+              key={dado.id}
+              img={dado.imgUrl}
+              nome={dado.nome}
+              descricao={dado.descricao}
+              preco={dado.preco}
+              categoria={dado.ategoria}
+              quantidade={dado.quantidade}
+            />
+          ))}
     </>
-  )
+  );
 }
-
-export default App
+export default App;

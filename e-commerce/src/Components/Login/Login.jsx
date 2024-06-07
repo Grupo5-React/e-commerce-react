@@ -1,15 +1,32 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import "./Login.css";
+import api from "../../api/api";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [usuarios, setUsuarios] = useState('');
+
+  const getUsuarios = async ()=>{
+    const response = await api().get('/users');
+    setUsuarios(response.data);
+  }
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Dados de Login:", { username, password });
   };
+
+  const handleVerificacao = () =>{
+    getUsuarios();
+   if(!usuarios.find((usuario)=>(usuario.nome == username && usuario.senha == password))){
+      alert("Usuário ou senha incorretos!!")
+      return;
+   }
+   alert("Login realizado com sucesso");
+  }
 
   return (
     <div className="container">
@@ -43,7 +60,7 @@ const Login = () => {
           </label>
           <a href="#">Esqueceu sua senha?</a>
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" onClick={handleVerificacao}>Login</button>
         <div className="signup-link">
           <p>
             Não tem uma conta? <a href="#">Registre-se</a>{" "}

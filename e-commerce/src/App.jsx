@@ -26,13 +26,12 @@ function App() {
   function handleClick() {
     setPesquisa(inputRef.current.value);
   }
-  //
 
   return (
     <>
       <div className='App'>
       <Login/>
-    </div>
+      </div>
       <input type="text" ref={inputRef} />
       <button onClick={handleClick}>Pesquisar</button>
       {pesquisa

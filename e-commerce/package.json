@@ -13,7 +13,6 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.19",
-
     "@react-icons/all-files": "^4.1.0",
     "axios": "^1.7.2",
     "json-server": "^1.0.0-beta.1",

@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
+import "./CadastroUsuario.css"
 import Botao from "../Buttons/Buttons";
 import Form from "../Forms/forms";
 import api from "../../api/api";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 const CadastroUsuario = ()=>{
      const [nome, setNome] = useState('');
      const [email, setEmail] = useState('');
      const [senha, setSenha] = useState('');
      const [usuarios, setUsuarios] = useState([]);
+
+     const history = useHistory()
 
      const postUsuario = async() =>{
        await api().post('/users',{
@@ -43,9 +47,7 @@ const CadastroUsuario = ()=>{
         }else{
             postUsuario();
                 alert("Cadastro realizado com Sucesso!!")
-                setNome('');
-                setEmail('');
-                setSenha('');
+                history.push('/Login')
         }
                 
              
@@ -55,12 +57,17 @@ const CadastroUsuario = ()=>{
 
     return(
         <>
-           
+        <div className="C">        
+           <form action="" >
                {Form(nome,"Nome",handleNome)}
+               <br />
                {Form(email,"E-mail",handleEmail)}
+               <br />
                {Form(senha,"Senha",handleSenha)}
+               <br />
                {Botao("Cadastro", handleClick)}
-            
+            </form>
+        </div>   
         </>
     )
 }

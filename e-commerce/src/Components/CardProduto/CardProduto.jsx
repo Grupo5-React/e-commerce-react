@@ -13,17 +13,19 @@ const CardProduto = ({
   AdicionarCarrinho,
 }) => {
   return (
-    <a className='card-produto' href={`/produto/${id}`}>
-        <img className='cardImg' src={img} alt={nome} />
+    <div className='card-produto'>
+      <a href={`/produto/${id}`}>
+        <img className="cardImg" src={img} alt={nome} />
         <p>{nome}</p>
         <p>{descricao}</p>
-        <p>{preco}</p>
+        <p>R$ {preco}</p>
         <p>{categoria}</p>
-        <p>{quantidade}</p>
+        <p>Em estoque: {quantidade}</p>
+      </a>
       <button onClick={() => AdicionarCarrinho(id)}>
         Adicionar ao Carrinho
       </button>
-    </a>
+    </div>
   );
 };
 

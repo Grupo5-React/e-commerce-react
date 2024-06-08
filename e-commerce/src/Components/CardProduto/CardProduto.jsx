@@ -1,4 +1,5 @@
 import React from 'react';
+import './CardProduto.css'
 
 const CardProduto = ({
   id,
@@ -11,8 +12,8 @@ const CardProduto = ({
   AdicionarCarrinho,
 }) => {
   return (
-    <a href="#">
-      <img src={img} alt={nome} />
+    <a className='card-produto' href="#">
+      <img className='cardImg' src={img} alt={nome} />
       <p>{nome}</p>
       <p>{descricao}</p>
       <p>{preco}</p>

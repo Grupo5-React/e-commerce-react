@@ -3,7 +3,7 @@ import CardProduto from '../Components/CardProduto/CardProduto';
 import { api } from '../api/api';
 import { useParams } from 'react-router-dom';
 
-const Produto = () => {
+const  Produto = () => {
   const [dados, setDados] = useState([]);
   const [filter, setFilter] = useState([]);
   const { categoria } = useParams();

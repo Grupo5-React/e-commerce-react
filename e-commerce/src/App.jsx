@@ -1,33 +1,43 @@
+
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Produto from './Pages/Produto';
-import { FaUser, FaLock } from 'react-icons/fa';
 import Login from './Components/Login/Login';
 import CadastroUsuario from './Components/CadastroUsuario/CadastroUsuario.jsx';
 import ProdutoCategoria from './Pages/ProdutoCategoria.jsx';
+import { GlobalStorage } from './hooks/GlobalContext .jsx';
+import Carrinho from './Pages/Carrinho.jsx';
 import ProdutoEspecifico from './Pages/ProdutoEspecifico.jsx';
+import Cabecalho from './Components/Header/header.jsx';
+
 
 function App() {
   return (
     <>
+    <Cabecalho/>
       <BrowserRouter>
-        <nav className='nav'>
+        {/* <nav className='nav'>
           <Link to="/login">Login</Link>
           <Link to="/cadastroUsuario">Cadastro</Link>
           <Link to="/produtos">Produtos</Link>
-          <Link to="/produtos/Gamer">Gamer</Link>
-          <Link to="/produtos/eletronico">eletronico</Link>
-        </nav>
+          <Link to="/produtos/hds">HDs</Link>
+          <Link to="/produtos/notebooks">Notebooks</Link>
+          <Link to="/produtos/suprimentos">Suprimentos</Link>
+          <Link to="/carrinho">carrinho</Link>
+        </nav> */}
         <Switch>
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/cadastroUsuario" component={CadastroUsuario} />
-          <Route
-            exact
-            path="/produtos/:categoria"
-            component={ProdutoCategoria}
-          />
-          <Route exact path="/produtos" component={Produto} />
-          <Route exact path="/produto/:id" component={ProdutoEspecifico} />
+          <GlobalStorage>
+            <Route exact path="/login" component={Login} />
+            <Route path="/cadastroUsuario" component={CadastroUsuario} />
+            <Route
+              exact
+              path="/produtos/:categoria"
+              component={ProdutoCategoria}
+            />
+            <Route exact path="/carrinho" component={Carrinho} />
+            <Route path="/produtos" component={Produto} />
+            <Route exact path="/produto/:id" component={ProdutoEspecifico} />
+          </GlobalStorage>
         </Switch>
       </BrowserRouter>
     </>

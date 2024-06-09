@@ -19,12 +19,12 @@ const ProdutoCategoria = () => {
     setDados(produtoFiltrado);
   }
   const produtosPorCategoria = dados.filter(
-    (produto) => produto.categoria === categoria,
+    (produto) => produto.categoria.toLowerCase() === categoria,
   );
 
   return (
     <div>
-      <h1>Produtos da Categoria {categoria}</h1>
+      <h1>Produtos da categoria {categoria}</h1>
 
       {produtosPorCategoria.map((dado) => (
         <CardProduto

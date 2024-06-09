@@ -8,7 +8,6 @@ const Carrinho = () => {
   const [subTotal, setSubTotal] = useState(
     carrinho.map((produto) => produto.preco),
   );
-  console.log(subTotal);
 
   function handleAumentar(id) {
     const novoCarrinho = carrinho.map((item) => {

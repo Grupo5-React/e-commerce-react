@@ -43,7 +43,10 @@ const Produto = () => {
       if (!produtoJaNoCarrinho) {
         setCarrinho([
           ...carrinho,
-          { ...produtoSelecionado, produtoQuantidades: 1 },
+          {
+            ...produtoSelecionado,
+            produtoQuantidades: 1,
+          },
         ]);
       } else {
         console.log('ja selecionado');

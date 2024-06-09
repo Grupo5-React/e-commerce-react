@@ -1,4 +1,4 @@
-/* .card {
+.card {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -28,8 +28,10 @@
 
 .botao:hover {
   background-color: #0056b3;
-} */
 
+}
+
+/*
  .card {
   display: flex;
   flex-direction: column;
@@ -53,5 +55,5 @@
 
 .cardImg {
   width: 17rem;
-
-} 
+}
+  */

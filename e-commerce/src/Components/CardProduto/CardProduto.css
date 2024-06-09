@@ -1,4 +1,4 @@
-
+/* 
 .card {
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -25,12 +25,13 @@
   padding: 8px 16px;
   cursor: pointer;
   margin-top: 10px;
-}
+} */
 
-.botao:hover {
+/* .botao:hover {
   background-color: #0056b3;
+} */
 
-.card-produto {
+ .card-produto {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,4 +55,4 @@
 .cardImg {
   width: 17rem;
 
-}
+} 

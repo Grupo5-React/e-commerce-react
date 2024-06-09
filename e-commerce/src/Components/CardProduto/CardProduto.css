@@ -24,16 +24,15 @@
   padding: 8px 16px;
   cursor: pointer;
   margin-top: 10px;
-} 
+}
 
 .botao:hover {
   background-color: #0056b3;
 
 }
+
 /*
-
- .card-produto {
-
+ .card {
   display: flex;
   flex-direction: column;
   justify-content: center;

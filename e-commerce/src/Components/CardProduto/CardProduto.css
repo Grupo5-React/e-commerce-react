@@ -29,7 +29,8 @@
 
 .botao:hover {
   background-color: #0056b3;
-
+}
+/*
 .card-produto {
   display: flex;
   flex-direction: column;
@@ -53,5 +54,5 @@
 
 .cardImg {
   width: 17rem;
-
 }
+  */

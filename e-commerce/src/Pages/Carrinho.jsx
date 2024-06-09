@@ -42,23 +42,40 @@ const Carrinho = () => {
 
   async function handleFinalizarCompra() {
     const itensPedido = [];
+    const alterarQuantidade = [];
+    let total = 0;
     carrinho.forEach((item) => {
+      const subTotal = item.preco * item.produtoQuantidades;
+      total += subTotal;
       itensPedido.push({
         idProduto: item.id,
         quantidade: item.produtoQuantidades,
       });
+      alterarQuantidade.push({
+        idProduto: item.id,
+        quantidade: item.quantidade - item.produtoQuantidades,
+      });
     });
-    console.log('pedido', itensPedido);
-
+    console.log('essa é quantidade ', alterarQuantidade);
     const response = await api.post('/pedido/', {
-      valorTotal: 5000,
+      valorTotal: total,
       idUser: '8b15',
       itens: itensPedido,
     });
+    alterarQuantidade.forEach(async (item) => {
+      try {
+        const respose = await api.patch(`/produto/${item.idProduto}`, {
+          quantidade: item.quantidade,
+        });
+        console.log(
+          `Produto ${item.idProduto} atualizado com sucesso`,
+          response.data,
+        );
+      } catch (error) {
+        console.error(`Erro ao atualizar o produto ${item.idProduto}:`, error);
+      }
+    });
   }
-
-  console.log('Carrinho = ', carrinho);
-
   return (
     <div>
       {carrinho.map((produto, id) => (

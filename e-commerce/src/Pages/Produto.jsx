@@ -4,11 +4,7 @@ import { api } from '../api/api';
 import GlobalContext from '../hooks/GlobalContext ';
 import './Produto.css';
 
-
-const  Produto = () => {
-  const [dados, setDados] = useState([]);
-  const [filter, setFilter] = useState([]);
-  const { categoria } = useParams();
+const Produto = () => {
   const inputRef = useRef();
   const { carrinho, dados, filter, setCarrinho, setDados, setFilter } =
     useContext(GlobalContext);

@@ -7,8 +7,8 @@
       "preco": 1789,
       "categoria": "Computadores",
       "quantidade": 10,
-      "avaliacaoTotal": 29.666666666666664,
-      "qtdAvaliacoes": 8,
+      "avaliacaoTotal": 38.666666666666664,
+      "qtdAvaliacoes": 11,
       "id": "311b95"
     },
     {
@@ -19,11 +19,10 @@
       "categoria": "Computadores",
       "quantidade": 4,
       "avaliacaoTotal": 29,
-      "qtdAvaliacoes": 7,
+      "qtdAvaliacoes": 9,
       "id": "c5b08c"
     },
     {
-      "id": "7a5765",
       "imgUrl": "https://m.media-amazon.com/images/I/71OYD5szyKL._AC_SL1200_.jpg",
       "nome": "PC Gamer Completo Mancer Intel Core i5 8ª Geração",
       "descricao": "16GB RAM, SSD 480GB + Combo Periférico Gamer + Monitor 21",
@@ -31,18 +30,19 @@
       "categoria": "Computadores",
       "quantidade": 6,
       "avaliacaoTotal": 5,
-      "qtdAvaliacoes": 1
+      "qtdAvaliacoes": 2,
+      "id": "7a5765"
     },
     {
-      "id": "86b3cc",
       "imgUrl": "https://m.media-amazon.com/images/I/61EAUBxgASL._AC_SL1200_.jpg",
       "nome": "PC CPU Completo Mancer, Intel Core I5",
       "descricao": "8GB De Memória Ram, SSD 240GB + Monitor 18.5",
       "preco": 1229.9,
       "categoria": "Computadores",
       "quantidade": 3,
-      "avaliacaoTotal": 1,
-      "qtdAvaliacoes": 1
+      "avaliacaoTotal": 5,
+      "qtdAvaliacoes": 2,
+      "id": "86b3cc"
     },
     {
       "id": "159ef5",
@@ -78,37 +78,37 @@
       "qtdAvaliacoes": 1
     },
     {
-      "id": "d1b8c6",
       "imgUrl": "https://m.media-amazon.com/images/I/61xlBnRkIxL._AC_SL1000_.jpg",
       "nome": "Computador Completo 3green Desktop Intel Core i5",
       "descricao": "16GB Monitor 19.5 HDMI SSD 480GB Windows 10 3D-089",
       "preco": 1309,
       "categoria": "Computadores",
       "quantidade": 10,
-      "avaliacaoTotal": 5,
-      "qtdAvaliacoes": 1
+      "avaliacaoTotal": 10,
+      "qtdAvaliacoes": 3,
+      "id": "d1b8c6"
     },
     {
-      "id": "36be9b",
       "imgUrl": "https://m.media-amazon.com/images/I/61s+lKUxtbL._AC_SX466_.jpg",
       "nome": "HD Interno, Barracuda Compute HDD 3.5, 4TB",
       "descricao": "ST4000DM004, Seagate, HD interno, Prata",
       "preco": 598,
       "categoria": "HDs",
       "quantidade": 25,
-      "avaliacaoTotal": 11,
-      "qtdAvaliacoes": 3
+      "avaliacaoTotal": 19,
+      "qtdAvaliacoes": 6,
+      "id": "36be9b"
     },
     {
-      "id": "e1560b",
       "imgUrl": "https://m.media-amazon.com/images/I/61nRjc+O3lL._AC_SL1500_.jpg",
       "nome": "HD Interno 1Tb Desktop, Western Digital",
       "descricao": "HD Interno, Prata",
       "preco": 240,
       "categoria": "HDs",
       "quantidade": 30,
-      "avaliacaoTotal": 12,
-      "qtdAvaliacoes": 3
+      "avaliacaoTotal": 17,
+      "qtdAvaliacoes": 4,
+      "id": "e1560b"
     },
     {
       "imgUrl": "https://m.media-amazon.com/images/I/81m1+dsYQjL._AC_SL1500_.jpg",

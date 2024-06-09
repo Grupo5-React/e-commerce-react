@@ -22,7 +22,7 @@ const ProdutoEspecifico = () => {
     setRatingValue(response.data.avaliacaoTotal / response.data.qtdAvaliacoes)
   }
 
-  const setRating = async (newRating) => {
+  const updateRating = async (newRating) => {
 
 
     const response = await api.put(`/produto/${id}`, {
@@ -65,9 +65,9 @@ const ProdutoEspecifico = () => {
               name="simple-controlled"
               value={ratingValue}
               onChange={(event, newRating) => {
-                setRating(newRating)
-                setIsRated(true)
+                updateRating(newRating)
                 setUserRating(newRating)
+                setIsRated(true)
               }}
             />
           </>

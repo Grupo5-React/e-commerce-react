@@ -1,10 +1,12 @@
 
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { FaUser, FaEye, FaEyeSlash } from 'react-icons/fa';
 import './Login.css';
 import { api } from '../../api/api';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import GlobalContext, { GlobalStorage } from '../../hooks/GlobalContext ';
+
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -12,8 +14,10 @@ const Login = () => {
   const [usuarios, setUsuarios] = useState('');
   const [visible, setVisible] = useState(false);
 
-  const history = useHistory();
+  const { usuarioLogado, setUsuarioLogado } = useContext(GlobalContext);
 
+  const history = useHistory();
+ 
   const getUsuarios = async () => {
     const response = await api.get('/users');
     setUsuarios(response.data);
@@ -32,10 +36,16 @@ const Login = () => {
     ) {
       alert('Usuário ou senha incorretos!!');
       return;
-    }
+    }else{
     alert('Login realizado com sucesso');
+    usuarios.map((user)=>{
+      if(user.email == username && user.senha == password){
+        setUsuarioLogado(user)
+      }
+    })
+    alert(usuarioLogado.id)
     history.push('/produtos')
-
+    }
   };
 
   return (

@@ -1,14 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import CardProduto from '../Components/CardProduto/CardProduto';
 import { api } from '../api/api';
-import { useParams } from 'react-router-dom';
+import GlobalContext from '../hooks/GlobalContext ';
+import './Produto.css';
 
 const Produto = () => {
-  const [dados, setDados] = useState([]);
-  const [filter, setFilter] = useState([]);
-  const { categoria } = useParams();
   const inputRef = useRef();
-  const [carrinho, setCarrinho] = useState([]);
+  const { carrinho, dados, filter, setCarrinho, setDados, setFilter } =
+    useContext(GlobalContext);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getAll();
@@ -35,26 +35,43 @@ const Produto = () => {
 
   function handleAdicionarCarrinho(id) {
     const produtoSelecionado = dados.find((produto) => produto.id === id);
-    setCarrinho([...carrinho, produtoSelecionado]);
+    const produtoJaNoCarrinho = carrinho.some(
+      (produto) => produto.id === produtoSelecionado.id,
+    );
+    setLoading(true);
+    setTimeout(() => {
+      if (!produtoJaNoCarrinho) {
+        setCarrinho([
+          ...carrinho,
+          { ...produtoSelecionado, produtoQuantidades: 1 },
+        ]);
+      } else {
+        console.log('ja selecionado');
+      }
+      setLoading(false);
+    }, 800);
   }
 
   return (
     <div>
       <input type="text" ref={inputRef} />
       <button onClick={handleClick}>Pesquisar</button>
-      {filter.map((dado) => (
-        <CardProduto
-          key={dado.id}
-          id={dado.id}
-          img={dado.imgUrl}
-          nome={dado.nome}
-          descricao={dado.descricao}
-          preco={dado.preco}
-          categoria={dado.categoria}
-          quantidade={dado.quantidade}
-          AdicionarCarrinho={handleAdicionarCarrinho}
-        />
-      ))}
+      <div className="flex">
+        {filter.map((dado) => (
+          <CardProduto
+            key={dado.id}
+            id={dado.id}
+            img={dado.imgUrl}
+            nome={dado.nome}
+            descricao={dado.descricao}
+            preco={dado.preco}
+            categoria={dado.categoria}
+            quantidade={dado.quantidade}
+            loading={loading}
+            AdicionarCarrinho={handleAdicionarCarrinho}
+          />
+        ))}
+      </div>
     </div>
   );
 };

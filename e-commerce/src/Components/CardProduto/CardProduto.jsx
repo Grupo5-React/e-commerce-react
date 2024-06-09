@@ -1,4 +1,6 @@
 import React from 'react';
+import './CardProduto.css';
+import Loading from '../Loading';
 
 const CardProduto = ({
   id,
@@ -9,19 +11,26 @@ const CardProduto = ({
   categoria,
   quantidade,
   AdicionarCarrinho,
+  loading,
 }) => {
   return (
-    <a href="#">
-      <img src={img} alt={nome} />
-      <p>{nome}</p>
-      <p>{descricao}</p>
-      <p>{preco}</p>
-      <p>{categoria}</p>
-      <p>{quantidade}</p>
+    <div className="card">
+      <a href="#">
+        <img src={img} alt={nome} className="imagem" />
+        <p className="titulo">{nome}</p>
+        <p>{descricao}</p>
+        <p>{preco}</p>
+        <p>{categoria}</p>
+        <p>{quantidade}</p>
+      </a>
       <button onClick={() => AdicionarCarrinho(id)}>
-        Adicionar ao Carrinho
+        {loading ? (
+          <Loading height={'50px'} width={'50px'} />
+        ) : (
+          'Adicionar ao Carrinho'
+        )}
       </button>
-    </a>
+    </div>
   );
 };
 

@@ -5,6 +5,8 @@ import { FaUser, FaLock } from 'react-icons/fa';
 import Login from './Components/Login/Login';
 import CadastroUsuario from './Components/CadastroUsuario/CadastroUsuario.jsx';
 import ProdutoCategoria from './Pages/ProdutoCategoria.jsx';
+import { GlobalStorage } from './hooks/GlobalContext .jsx';
+import Carrinho from './Pages/Carrinho.jsx';
 
 function App() {
   return (
@@ -14,18 +16,23 @@ function App() {
           <Link to="/login">Login</Link>
           <Link to="/cadastroUsuario">Cadastro</Link>
           <Link to="/produtos">Produtos</Link>
-          <Link to="/produtos/Gamer">Gamer</Link>
-          <Link to="/produtos/eletronico">eletronico</Link>
+          <Link to="/produtos/hds">HDs</Link>
+          <Link to="/produtos/notebooks">Notebooks</Link>
+          <Link to="/produtos/suprimentos">Suprimentos</Link>
+          <Link to="/carrinho">carrinho</Link>
         </nav>
         <Switch>
-          <Route exact path="/login" component={Login} />
-          <Route path="/cadastroUsuario" component={CadastroUsuario} />
-          <Route
-            exact
-            path="/produtos/:categoria"
-            component={ProdutoCategoria}
-          />
-          <Route path="/produtos" component={Produto} />
+          <GlobalStorage>
+            <Route exact path="/login" component={Login} />
+            <Route path="/cadastroUsuario" component={CadastroUsuario} />
+            <Route
+              exact
+              path="/produtos/:categoria"
+              component={ProdutoCategoria}
+            />
+            <Route exact path="/carrinho" component={Carrinho} />
+            <Route path="/produtos" component={Produto} />
+          </GlobalStorage>
         </Switch>
       </BrowserRouter>
     </>

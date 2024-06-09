@@ -7,12 +7,13 @@ import CadastroUsuario from './Components/CadastroUsuario/CadastroUsuario.jsx';
 import ProdutoCategoria from './Pages/ProdutoCategoria.jsx';
 import { GlobalStorage } from './hooks/GlobalContext .jsx';
 import Carrinho from './Pages/Carrinho.jsx';
+import ProdutoEspecifico from './Pages/ProdutoEspecifico.jsx';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <nav>
+        <nav className='nav'>
           <Link to="/login">Login</Link>
           <Link to="/cadastroUsuario">Cadastro</Link>
           <Link to="/produtos">Produtos</Link>
@@ -32,6 +33,7 @@ function App() {
             />
             <Route exact path="/carrinho" component={Carrinho} />
             <Route path="/produtos" component={Produto} />
+            <Route exact path="/produto/:id" component={ProdutoEspecifico} />
           </GlobalStorage>
         </Switch>
       </BrowserRouter>

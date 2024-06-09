@@ -2,7 +2,6 @@ import React from 'react';
 import './CardProduto.css';
 import Loading from '../Loading';
 
-
 const CardProduto = ({
   id,
   img,
@@ -34,5 +33,4 @@ const CardProduto = ({
     </div>
   );
 };
-
 export default CardProduto;

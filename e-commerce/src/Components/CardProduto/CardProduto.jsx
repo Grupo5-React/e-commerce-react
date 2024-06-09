@@ -16,21 +16,21 @@ const CardProduto = ({
 }) => {
   return (
     <div className="card">
-    <a className='card-produto' href={`/produto/${id}`}>
-        <img className='cardImg' src={img} alt={nome} />
-        <p className="titulo">{nome}</p>
-        <p>{descricao}</p>
-        <p>R$ {preco}</p>
-        <p>{categoria}</p>
-        <p>Em estoque: {quantidade}</p>
-      </a>
-      <button onClick={() => AdicionarCarrinho(id)}>
-        {loading ? (
-          <Loading height={'50px'} width={'50px'} />
-        ) : (
-          'Adicionar ao Carrinho'
-        )}
-      </button>
+      <a className='card-produto' href={`/produto/${id}`}>
+          <img className='cardImg' src={img} alt={nome} />
+          <p className="titulo">{nome}</p>
+          <p>{descricao}</p>
+          <p>R$ {preco}</p>
+          <p>{categoria}</p>
+          <p>Em estoque: {quantidade}</p>
+        </a>
+        <button onClick={() => AdicionarCarrinho(id)}>
+          {loading ? (
+            <Loading height={'50px'} width={'50px'} />
+          ) : (
+            'Adicionar ao Carrinho'
+          )}
+        </button>
     </div>
   );
 };

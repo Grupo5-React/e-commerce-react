@@ -1,3 +1,35 @@
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+}
+
+.imagem {
+  width: 100%;
+  height: auto;
+}
+
+.titulo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.botao {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.botao:hover {
+  background-color: #0056b3;
+
 .card-produto {
   display: flex;
   flex-direction: column;
@@ -21,4 +53,5 @@
 
 .cardImg {
   width: 17rem;
+
 }

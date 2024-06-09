@@ -66,3 +66,21 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.active{
+  border-radius: 50px;
+  border-top: solid 5px transparent;
+  border-left: solid 5px red;
+  border-bottom:solid 5px red;
+  border-right:solid 5px red;
+  transition: 0.8s;
+  animation: loading 0.8s linear infinite;
+}
+
+@keyframes loading {
+  0%{
+    transform: rotate(0deg);
+  } 100%{
+    transform: rotate(360deg);
+  }
+}

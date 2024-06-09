@@ -1,6 +1,7 @@
 import React from 'react';
-import './CardProduto.css'
-import { Link } from 'react-router-dom';
+import './CardProduto.css';
+import Loading from '../Loading';
+
 
 const CardProduto = ({
   id,
@@ -11,19 +12,26 @@ const CardProduto = ({
   categoria,
   quantidade,
   AdicionarCarrinho,
+  loading,
 }) => {
   return (
+    <div className="card">
     <a className='card-produto' href={`/produto/${id}`}>
         <img className='cardImg' src={img} alt={nome} />
-        <p>{nome}</p>
+        <p className="titulo">{nome}</p>
         <p>{descricao}</p>
         <p>{preco}</p>
         <p>{categoria}</p>
         <p>{quantidade}</p>
+     </a>
       <button onClick={() => AdicionarCarrinho(id)}>
-        Adicionar ao Carrinho
+        {loading ? (
+          <Loading height={'50px'} width={'50px'} />
+        ) : (
+          'Adicionar ao Carrinho'
+        )}
       </button>
-    </a>
+    </div>
   );
 };
 

@@ -20,7 +20,7 @@ const CardProduto = ({
           <img className='cardImg' src={img} alt={nome} />
           <p className="titulo">{nome}</p>
           <p>{descricao}</p>
-          <p>R$ {preco}</p>
+          <p>R$ {preco.toFixed(2)}</p>
           <p>{categoria}</p>
           <p>Em estoque: {quantidade}</p>
         </a>

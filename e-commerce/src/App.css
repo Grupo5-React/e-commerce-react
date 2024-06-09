@@ -16,3 +16,12 @@
     background-size: cover;
     background-position: center;
 }
+
+.nav {
+  display: flex;
+  margin: 1em;
+}
+
+Link {
+  margin: 1em;
+}

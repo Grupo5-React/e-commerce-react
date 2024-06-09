@@ -18,7 +18,7 @@ const CadastroUsuario = () => {
      const history = useHistory()
 
      const postUsuario = async() =>{
-       await api().post('/users',{
+       await api.post('/users',{
             nome,
             email,
             senha

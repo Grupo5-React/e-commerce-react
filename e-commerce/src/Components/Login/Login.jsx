@@ -1,11 +1,11 @@
 
 
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { FaUser, FaEye, FaEyeSlash } from 'react-icons/fa';
 import './Login.css';
 import { api } from '../../api/api';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import GlobalContext, { GlobalStorage } from '../../hooks/GlobalContext ';
+import GlobalContext from '../../hooks/GlobalContext ';
 
 
 const Login = () => {
@@ -13,6 +13,10 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [usuarios, setUsuarios] = useState('');
   const [visible, setVisible] = useState(false);
+
+  useEffect(()=>{
+    getUsuarios(); 
+  },[])
 
   const { usuarioLogado, setUsuarioLogado } = useContext(GlobalContext);
 
@@ -28,7 +32,6 @@ const Login = () => {
   };
 
   const handleVerificacao = () => {
-    getUsuarios();
     if (
       !usuarios.find(
         (usuario) => usuario.email == username && usuario.senha == password,
@@ -37,14 +40,25 @@ const Login = () => {
       alert('Usuário ou senha incorretos!!');
       return;
     }else{
-    alert('Login realizado com sucesso');
-    usuarios.map((user)=>{
-      if(user.email == username && user.senha == password){
-        setUsuarioLogado(user)
+      setUsuarioLogado(null);
+
+      let usuarioEncontrado = null;
+      usuarios.forEach((user) => {
+        if (user.email === username && user.senha === password) {
+          usuarioEncontrado = user;
+        }
+      });
+      
+      if (usuarioEncontrado) {
+        setUsuarioLogado(usuarioEncontrado);
+        alert('Login realizado com sucesso');
+      } else {
+        alert('Usuário não encontrado');
       }
-    })
-    alert(usuarioLogado.id)
-    history.push('/produtos')
+      if (usuarioLogado) {
+        alert(usuarioLogado.id);
+      }
+    // history.push('/produtos')
     }
   };
 

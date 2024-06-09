@@ -3,12 +3,12 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('../../assets/fundo_tela_login.png');
+    /* background-image: url('../../assets/fundo_tela_login.png'); */
     background-size: cover;
     background-position: center;
 }
 
-form {
+.Formulario {
     width: 450px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);

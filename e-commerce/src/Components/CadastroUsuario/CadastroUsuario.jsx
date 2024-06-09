@@ -1,10 +1,9 @@
 
 import { useEffect, useState } from "react";
 import "./CadastroUsuario.css"
-import Botao from "../Buttons/Buttons";
-import Form from "../Forms/forms";
 import { api } from '../../api/api';
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { FaLock, FaMailBulk, FaUser } from "react-icons/fa";
 
 
 
@@ -36,17 +35,6 @@ const CadastroUsuario = () => {
     setUsuarios(response.data);
   };
 
-  const handleNome = (e) => {
-    setNome(e.target.value);
-  };
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  
-    const handleSenha=(e)=>{
-        setSenha(e.target.value);
-    }
     const handleClick = () =>{
         getAll();
         if (usuarios.find(usuario => usuario.email == email)) {
@@ -65,17 +53,49 @@ const CadastroUsuario = () => {
 
     return(
         <>
-        <div className="C">        
-           <form action="" >
-               {Form(nome,"Nome",handleNome)}
-               <br />
-               {Form(email,"E-mail",handleEmail)}
-               <br />
-               {Form(senha,"Senha",handleSenha)}
-               <br />
-               {Botao("Cadastro", handleClick)}
-            </form>
-        </div>   
+    <section className="Login"> 
+      <div className="container">
+        <form>
+          <h1>Faça seu cadastro</h1>
+          <div className="input-field">
+            <input
+              type="text"
+              placeholder="Nome"
+              required
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+            />
+            <FaUser className="icon" />
+        </div>
+          <div className="input-field">
+            <input
+              type="text"
+              placeholder="E-mail"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <FaMailBulk className="icon" />
+          </div>
+          <div className="input-field">
+            <input
+              type="password"
+              placeholder="Senha"
+              required
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
+            <FaLock className="icon" />
+          </div>
+
+          <div className="recall-forget">
+          </div>
+          <button type="submit" onClick={handleClick}>Login</button>
+          <div className="signup-link">
+          </div>
+        </form>
+      </div>
+    </section>  
         </>
     )
 }

@@ -1,36 +1,41 @@
 
 
 import { useState } from 'react';
-import { FaUser, FaLock } from 'react-icons/fa';
+import { FaUser, FaEye, FaEyeSlash } from 'react-icons/fa';
 import './Login.css';
 import { api } from '../../api/api';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [usuarios, setUsuarios] = useState('');
+  const [visible, setVisible] = useState(false);
+
+  const history = useHistory();
 
   const getUsuarios = async () => {
-    const response = await api().get('/users');
+    const response = await api.get('/users');
     setUsuarios(response.data);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('Dados de Login:', { username, password });
   };
 
   const handleVerificacao = () => {
     getUsuarios();
     if (
       !usuarios.find(
-        (usuario) => usuario.nome == username && usuario.senha == password,
+        (usuario) => usuario.email == username && usuario.senha == password,
       )
     ) {
       alert('Usuário ou senha incorretos!!');
       return;
     }
     alert('Login realizado com sucesso');
+    history.push('/produtos')
+
   };
 
   return (
@@ -41,7 +46,7 @@ const Login = () => {
           <h1>Acesse o sistema</h1>
           <div className="input-field">
             <input
-              type="text"
+              type="email"
               placeholder="E-mail"
               required
               value={username}
@@ -51,13 +56,19 @@ const Login = () => {
           </div>
           <div className="input-field">
             <input
-              type="password"
+              type={visible? "text" : "password"}
               placeholder="Senha"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+
             />
-            <FaLock className="icon" />
+            <span
+              className="button-show-password OlhoSenha"
+              onClick={()=>{setVisible(!visible)}}
+            >
+            {visible? <FaEye /> : <FaEyeSlash />}
+            </span>
           </div>
 
           <div className="recall-forget">

@@ -1,6 +1,7 @@
 import React from 'react';
 import './CardProduto.css';
 import Loading from '../Loading';
+import { Box, CircularProgress } from '@mui/material';
 
 const CardProduto = ({
   id,
@@ -25,7 +26,10 @@ const CardProduto = ({
       </a>
       <button onClick={() => AdicionarCarrinho(id)}>
         {loading ? (
-          <Loading height={'50px'} width={'50px'} />
+          /*<Loading height={'50px'} width={'50px'} />*/
+          <Box sx={{ display: 'flex' }}>
+            <CircularProgress />
+          </Box>
         ) : (
           'Adicionar ao Carrinho'
         )}

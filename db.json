@@ -1,5 +1,145 @@
 {
+  "users": [
+    {
+      "id": "8b15",
+      "nome": "Antonio",
+      "email": "antonio@email.com",
+      "senha": "123456"
+    }
+  ],
   "produto": [
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/41QiqriyyPL._AC_SL1000_.jpg",
+      "nome": "Notebook Galaxy Book3",
+      "descricao": "360 Windows 11 Home Intel Core i7-1360P 16GB 512 GB SSD 15.6 Full HD AMOLED 1.46 kg",
+      "preco": 5585.9,
+      "categoria": "Notebooks",
+      "quantidade": 12,
+      "avaliacaoTotal": 17,
+      "qtdAvaliacoes": 2,
+      "id": "e71f"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/71zxWLbeYYL._AC_SL1500_.jpg",
+      "nome": "Notebook ASUS TUF Gaming F15",
+      "descricao": "NVIDIA RTX3050, Intel Core I5, 8GB, 512GB, KeepOS, Tela de 15,6, Cinza - FX507ZC4-HN100",
+      "preco": 5585,
+      "categoria": "Notebooks",
+      "quantidade": 10,
+      "avaliacaoTotal": 29,
+      "qtdAvaliacoes": 9,
+      "id": "6dfa"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/51LUmJ+BjDL._AC_SL1000_.jpg",
+      "nome": "Notebook Asus Vivobook M1502ia-ej211",
+      "descricao": "Ryzen 7 4600h 16gb 256gb Ssd Linux Keep Os 15,6 Led Prata",
+      "preco": 5699,
+      "categoria": "Notebooks",
+      "quantidade": 17,
+      "avaliacaoTotal": 5,
+      "qtdAvaliacoes": 2,
+      "id": "6b98"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/512JJoQh4lL._AC_SL1000_.jpg",
+      "nome": "Notebook Acer Aspire 3",
+      "descricao": "A315-510P-35D2 Intel Core i3, 8GB RAM, 512GB SSD, 15.6 LED FULL HD, Windows 11",
+      "preco": 2299,
+      "categoria": "Notebooks",
+      "quantidade": 18,
+      "avaliacaoTotal": 15,
+      "qtdAvaliacoes": 3,
+      "id": "f682"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/51mtlUsJ3rL._AC_SL1000_.jpg",
+      "nome": "Galaxy Book2 Intel Core i5-1235U",
+      "descricao": "Windows 11 Home, 8GB, 256GB SSD, Intel Iris Xe, 15.6 Full HD LED, 1.81kg",
+      "preco": 2919,
+      "categoria": "Notebooks",
+      "quantidade": 10,
+      "avaliacaoTotal": 12,
+      "qtdAvaliacoes": 1,
+      "id": "5297"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/71UOx5ZIoAL._AC_SL1500_.jpg",
+      "nome": "Notebook ASUS X515MA",
+      "descricao": "Celeron Dual Core, SSD 128GB, 4GB, WIN 11 Home, 15,60 Led-Backlit Anti-Glare, Slate Gray - X515MA-BR933WS",
+      "preco": 1557,
+      "categoria": "Notebooks",
+      "quantidade": 15,
+      "avaliacaoTotal": 15,
+      "qtdAvaliacoes": 1,
+      "id": "64eb"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/71epkJC5SxL._AC_SL1000_.jpg",
+      "nome": "Notebook Dell Inspiron I15-I120K-A10P",
+      "descricao": "15.6 Full HD 12ª Geração Intel Core i3 8GB 256GB SSD Windows 11 Preto",
+      "preco": 2546,
+      "categoria": "Notebooks",
+      "quantidade": 8,
+      "avaliacaoTotal": 24,
+      "qtdAvaliacoes": 1,
+      "id": "26c2"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/51EgiK+12uL._AC_SL1000_.jpg",
+      "nome": "Notebook VAIO FE15 Intel Core i3",
+      "descricao": "11 gen 8GB RAM 256GB SSD, Tela 15.6 Polegadas Full HD Antirreflexo, Windows 11 Home, Cinza Grafite - VJFE55F11X-B0111H",
+      "preco": 2247.9,
+      "categoria": "Notebooks",
+      "quantidade": 7,
+      "avaliacaoTotal": 10,
+      "qtdAvaliacoes": 3,
+      "id": "52d9"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/71bqk4b3SBL._AC_SL1500_.jpg",
+      "nome": "Notebook Positivo Vision C15 ",
+      "descricao": "Lumina Bar Celeron, 4GB 128GB eMMC, Tela 15 polegadas HD Antirreflexo, Windows 11, Tecla Link - Cinza -2 ANOS DE GARANTIA",
+      "preco": 1247.85,
+      "categoria": "Notebooks",
+      "quantidade": 10,
+      "avaliacaoTotal": 19,
+      "qtdAvaliacoes": 6,
+      "id": "a8a6"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/81IVG4BF9vL._AC_SL1500_.jpg",
+      "nome": "Notebook HP Intel Core i3-1215U",
+      "descricao": "8GB 256GB SSD 15,6” - Windows 11",
+      "preco": 2294.1,
+      "categoria": "Notebooks",
+      "quantidade": 8,
+      "avaliacaoTotal": 17,
+      "qtdAvaliacoes": 4,
+      "id": "52ab"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/61kJtHeGJ5L._AC_SL1000_.jpg",
+      "nome": "Computador Completo All In One Intel Core i7",
+      "descricao": "21,5 Full HD 16GB SSD 512GB 4 Núcleos Super Turbo Hdmi Teclado e Mouse",
+      "preco": 2870.02,
+      "categoria": "Computadores",
+      "quantidade": 5,
+      "avaliacaoTotal": 29,
+      "qtdAvaliacoes": 2,
+      "id": "4199"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/71K3Kzau1rL._AC_SL1500_.jpg",
+      "nome": "Computador Completo Intel Core i5",
+      "descricao": "16GB SSD 256GB + Headset + Adaptador USB-C Monitor 19 4 Núcleos Super Turbo Pc Hdmi Teclado e Mouse Strong Tech",
+      "preco": 1210.01,
+      "categoria": "Computadores",
+      "quantidade": 5,
+      "avaliacaoTotal": 39,
+      "qtdAvaliacoes": 2,
+      "id": "e24b"
+    },
     {
       "imgUrl": "https://m.media-amazon.com/images/I/51Q5lJTUrCL._AC_SL1000_.jpg",
       "nome": "Computador Completo Intel Core i7",
@@ -7,9 +147,9 @@
       "preco": 1789,
       "categoria": "Computadores",
       "quantidade": 10,
-      "avaliacaoTotal": 53.666666666666664,
-      "qtdAvaliacoes": 14,
-      "id": "311b95"
+      "avaliacaoTotal": 18,
+      "qtdAvaliacoes": 3,
+      "id": "d872"
     },
     {
       "imgUrl": "https://m.media-amazon.com/images/I/51ADsKwewBL._AC_SL1000_.jpg",
@@ -18,9 +158,9 @@
       "preco": 685,
       "categoria": "Computadores",
       "quantidade": 4,
-      "avaliacaoTotal": 29,
-      "qtdAvaliacoes": 9,
-      "id": "c5b08c"
+      "avaliacaoTotal": 16,
+      "qtdAvaliacoes": 3,
+      "id": "69b1"
     },
     {
       "imgUrl": "https://m.media-amazon.com/images/I/71OYD5szyKL._AC_SL1200_.jpg",
@@ -29,9 +169,9 @@
       "preco": 2739.9,
       "categoria": "Computadores",
       "quantidade": 6,
-      "avaliacaoTotal": 5,
+      "avaliacaoTotal": 14,
       "qtdAvaliacoes": 2,
-      "id": "7a5765"
+      "id": "84e7"
     },
     {
       "imgUrl": "https://m.media-amazon.com/images/I/61EAUBxgASL._AC_SL1200_.jpg",
@@ -40,42 +180,42 @@
       "preco": 1229.9,
       "categoria": "Computadores",
       "quantidade": 3,
-      "avaliacaoTotal": 5,
-      "qtdAvaliacoes": 2,
-      "id": "86b3cc"
+      "avaliacaoTotal": 24,
+      "qtdAvaliacoes": 3,
+      "id": "b0cd"
     },
     {
-      "id": "159ef5",
       "imgUrl": "https://m.media-amazon.com/images/I/61GiE2virML._AC_SL1102_.jpg",
       "nome": "Computador Intel Core I5",
       "descricao": "8gb 240gb Ssd. Total",
       "preco": 625,
       "categoria": "Computadores",
       "quantidade": 8,
-      "avaliacaoTotal": 2,
-      "qtdAvaliacoes": 1
+      "avaliacaoTotal": 17,
+      "qtdAvaliacoes": 5,
+      "id": "fc96"
     },
     {
-      "id": "d306fd",
       "imgUrl": "https://m.media-amazon.com/images/I/61ptRAOfGjL._AC_SL1500_.jpg",
       "nome": "PC ITX Gamer FPS Headshot",
       "descricao": "Core I5 13400F, NVídia GeForce RTX 3060 12GB, 16GB Ram, SSD M.2 500GB",
       "preco": 5999,
       "categoria": "Computadores",
       "quantidade": 6,
-      "avaliacaoTotal": 5,
-      "qtdAvaliacoes": 1
+      "avaliacaoTotal": 15,
+      "qtdAvaliacoes": 2,
+      "id": "c1f9"
     },
     {
-      "id": "47b339",
       "imgUrl": "https://m.media-amazon.com/images/I/519TJPhAMxL._AC_SL1000_.jpg",
       "nome": "Computador Completo Slim Intel Core i5",
       "descricao": "16GB SSD 512GB Wifi Windows 10 Pro Monitor 19 3green Office 3GO-029",
       "preco": 1320,
       "categoria": "Computadores",
       "quantidade": 5,
-      "avaliacaoTotal": 4,
-      "qtdAvaliacoes": 1
+      "avaliacaoTotal": 25,
+      "qtdAvaliacoes": 4,
+      "id": "e61c"
     },
     {
       "imgUrl": "https://m.media-amazon.com/images/I/61xlBnRkIxL._AC_SL1000_.jpg",
@@ -84,9 +224,119 @@
       "preco": 1309,
       "categoria": "Computadores",
       "quantidade": 10,
-      "avaliacaoTotal": 10,
+      "avaliacaoTotal": 18,
       "qtdAvaliacoes": 3,
-      "id": "d1b8c6"
+      "id": "58f0"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/61JaQJreZrL._AC_SL1200_.jpg",
+      "nome": "Chamex - Papel Sulfite",
+      "descricao": "A4, 75g, 500 folhas",
+      "preco": 32,
+      "categoria": "Suprimentos",
+      "quantidade": 100,
+      "avaliacaoTotal": 16,
+      "qtdAvaliacoes": 4,
+      "id": "6de5"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/51NiAEvKixL._AC_SL1200_.jpg",
+      "nome": "Papel Sulfite A4",
+      "descricao": "HP Premium, 90g, Branco, 500 Folhas",
+      "preco": 41.54,
+      "categoria": "Suprimentos",
+      "quantidade": 90,
+      "avaliacaoTotal": 18,
+      "qtdAvaliacoes": 3,
+      "id": "90a0"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/71dhm05hhEL._AC_SL1205_.jpg",
+      "nome": "Off Paper 59",
+      "descricao": "Papel Fotográfico A4 - 210 x 297mm, 50 Folhas",
+      "preco": 26.99,
+      "categoria": "Suprimentos",
+      "quantidade": 34,
+      "avaliacaoTotal": 28,
+      "qtdAvaliacoes": 4,
+      "id": "2820"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/61SpB68--tL._AC_SL1500_.jpg",
+      "nome": "Cartucho HP 664 Colorido Original",
+      "descricao": "(F6V28AB) Para HP Deskjet",
+      "preco": 72,
+      "categoria": "Suprimentos",
+      "quantidade": 40,
+      "avaliacaoTotal": 16,
+      "qtdAvaliacoes": 4,
+      "id": "f2af"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/81rYpjuTwdL._AC_SL1500_.jpg",
+      "nome": "Cartucho HP 667 Preto Original",
+      "descricao": "(3YM79AB) Para HP Deskjet 2376, 2776, 6476, 5076, 5276",
+      "preco": 57.6,
+      "categoria": "Suprimentos",
+      "quantidade": 30,
+      "avaliacaoTotal": 18,
+      "qtdAvaliacoes": 3,
+      "id": "86b5"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/61Abtv7DRbL._AC_SL1000_.jpg",
+      "nome": "Tinta Compatível Com Cartucho 667",
+      "descricao": "Impressora 2774 Valejet",
+      "preco": 79.9,
+      "categoria": "Suprimentos",
+      "quantidade": 8,
+      "avaliacaoTotal": 19,
+      "qtdAvaliacoes": 2,
+      "id": "f1a3"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/81ZLARTPhWL._AC_SX569_.jpg",
+      "nome": "Bolsa Executiva Para Notebook",
+      "descricao": "Impermeavel",
+      "preco": 165.99,
+      "categoria": "Suprimentos",
+      "quantidade": 20,
+      "avaliacaoTotal": 17,
+      "qtdAvaliacoes": 5,
+      "id": "7427"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/5179Td+HvEL._AC_SL1200_.jpg",
+      "nome": "Capa Case com Bolso para Notebook",
+      "descricao": "17 polegadas Luva Preto",
+      "preco": 52.99,
+      "categoria": "Suprimentos",
+      "quantidade": 5,
+      "avaliacaoTotal": 18,
+      "qtdAvaliacoes": 4,
+      "id": "34e5"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/51r6v5HdiiL._AC_SL1000_.jpg",
+      "nome": "Mochila Transversal Lenovo Casual",
+      "descricao": "Preto T210 até 15.6 para notebook GX40Q17225",
+      "preco": 99,
+      "categoria": "Suprimentos",
+      "quantidade": 5,
+      "avaliacaoTotal": 17,
+      "qtdAvaliacoes": 4,
+      "id": "631b"
+    },
+    {
+      "imgUrl": "",
+      "nome": "Bolsas para notebook Manga para mulheres",
+      "descricao": "Mala de viagem Bolsa de ombro (15.6inch)",
+      "preco": 120,
+      "categoria": "Suprimentos",
+      "quantidade": 20,
+      "avaliacaoTotal": 16,
+      "qtdAvaliacoes": 3,
+      "id": "10b1"
     },
     {
       "imgUrl": "https://m.media-amazon.com/images/I/61s+lKUxtbL._AC_SX466_.jpg",
@@ -95,9 +345,9 @@
       "preco": 598,
       "categoria": "HDs",
       "quantidade": 25,
-      "avaliacaoTotal": 19,
-      "qtdAvaliacoes": 6,
-      "id": "36be9b"
+      "avaliacaoTotal": 15,
+      "qtdAvaliacoes": 2,
+      "id": "3ae5"
     },
     {
       "imgUrl": "https://m.media-amazon.com/images/I/61nRjc+O3lL._AC_SL1500_.jpg",
@@ -106,9 +356,9 @@
       "preco": 240,
       "categoria": "HDs",
       "quantidade": 30,
-      "avaliacaoTotal": 17,
-      "qtdAvaliacoes": 4,
-      "id": "e1560b"
+      "avaliacaoTotal": 19,
+      "qtdAvaliacoes": 2,
+      "id": "1b7d"
     },
     {
       "imgUrl": "https://m.media-amazon.com/images/I/81m1+dsYQjL._AC_SL1500_.jpg",
@@ -117,42 +367,103 @@
       "preco": 990,
       "categoria": "HDs",
       "quantidade": 45,
-      "avaliacaoTotal": 9,
-      "qtdAvaliacoes": 2,
-      "id": "801d0c"
+      "avaliacaoTotal": 18,
+      "qtdAvaliacoes": 4,
+      "id": "b699"
     },
     {
-      "id": "736922",
       "imgUrl": "https://m.media-amazon.com/images/I/61Np0SuI9rL._AC_SL1500_.jpg",
       "nome": "Western Digital Disco rígido interno de vigilância",
       "descricao": "WD Purple 4TB-SATA 6 Gb/s, cache de 256 MB, 3,5 - WD43PURZ",
       "preco": 670,
       "categoria": "HDs",
       "quantidade": 22,
-      "avaliacaoTotal": 9,
-      "qtdAvaliacoes": 2
+      "avaliacaoTotal": 16,
+      "qtdAvaliacoes": 4,
+      "id": "2d8d"
     },
     {
-      "id": "57752d",
       "imgUrl": "https://m.media-amazon.com/images/I/41r+yLJX5GL._AC_SX450_.jpg",
       "nome": "Hitachi HUA722020ALA331",
       "descricao": "2TB 7,2K RPM 32MB SATA-3.0Gb/s HDD de 3,5 polegadas",
       "preco": 255.61,
       "categoria": "HDs",
       "quantidade": 60,
+      "avaliacaoTotal": 17,
+      "qtdAvaliacoes": 4,
+      "id": "8076"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/71W3kPfDc0L._AC_SL1500_.jpg",
+      "nome": "HD Interno Toshiba 8TB 3,5' S300",
+      "descricao": "Surveillance HDWT380UZSVAR",
+      "preco": 1329.99,
+      "categoria": "HDs",
+      "quantidade": 10,
+      "avaliacaoTotal": 16,
+      "qtdAvaliacoes": 3,
+      "id": "733f"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/612Ix7X89tL._AC_SL1500_.jpg",
+      "nome": "HDD Desktop Seagate SkyHawk Surveillance",
+      "descricao": "2TB SATA6 5400RPM 256MB 3.5",
+      "preco": 509.91,
+      "categoria": "HDs",
+      "quantidade": 14,
+      "avaliacaoTotal": 18,
+      "qtdAvaliacoes": 3,
+      "id": "2b14"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/81S-Gug4DmL._AC_SY450_.jpg",
+      "nome": "Western Digital Disco rígido interno 8TB WD Red Plus",
+      "descricao": "NAS-5640 RPM, SATA 6 Gb/s, CMR, 256 MB Cache, 3,5 - WD80EFPX",
+      "preco": 1305,
+      "categoria": "HDs",
+      "quantidade": 30,
+      "avaliacaoTotal": 19,
+      "qtdAvaliacoes": 2,
+      "id": "23dd"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/91poWWUpM8L._AC_SL1500_.jpg",
+      "nome": "HD Interno Seagate, Barracuda Computer HDD 2.5",
+      "descricao": "2TB, ST2000LM015 Seagate, HD interno, Prata",
+      "preco": 690,
+      "categoria": "HDs",
+      "quantidade": 12,
       "avaliacaoTotal": 15,
-      "qtdAvaliacoes": 3
+      "qtdAvaliacoes": 2,
+      "id": "5ca4"
     },
     {
-      "id": "4ab113",
-      "imgUrl": "https://m.media-amazon.com/images/I/41r+yLJX5GL._AC_SX450_.jpg",
-      "nome": "Hitachi HUA722020ALA331",
-      "descricao": "2TB 7,2K RPM 32MB SATA-3.0Gb/s HDD de 3,5 polegadas",
-      "preco": 255.61,
+      "imgUrl": "https://m.media-amazon.com/images/I/81M5kQ27BQL._AC_SL1500_.jpg",
+      "nome": "HD TOSHIBA SURVEILLANCE S300",
+      "descricao": "2TB, 5400 RPM, SATA - HDWT720UZSVA",
+      "preco": 487.9,
       "categoria": "HDs",
-      "quantidade": 60,
-      "avaliacaoTotal": 10,
-      "qtdAvaliacoes": 2
+      "quantidade": 10,
+       "avaliacaoTotal": 18,
+      "qtdAvaliacoes": 5,
+      "id": "7597"
+    }
+  ],
+  "pedido": [
+    {
+      "id": "a77e",
+      "valorTotal": 27927.699999999997,
+      "idUser": "8b15",
+      "itens": [
+        {
+          "idProduto": "e71f",
+          "quantidade": 3
+        },
+        {
+          "idProduto": "6dfa",
+          "quantidade": 2
+        }
+      ]
     }
   ]
 }

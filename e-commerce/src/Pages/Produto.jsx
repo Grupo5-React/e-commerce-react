@@ -5,7 +5,6 @@ import GlobalContext from '../hooks/GlobalContext ';
 import './Produto.css';
 
 const Produto = () => {
-  const inputRef = useRef();
   const { carrinho, dados, filter, setCarrinho, setDados, setFilter } =
     useContext(GlobalContext);
   const [loading, setLoading] = useState(false);
@@ -22,7 +21,7 @@ const Produto = () => {
     setFilter(produtoFiltrado);
     setDados(produtoFiltrado);
   }
-
+  /*
   function handleFilter() {
     let valorInput = inputRef.current.value.toLowerCase().normalize();
     if (valorInput === '') {
@@ -40,7 +39,7 @@ const Produto = () => {
   function handleChange() {
     handleFilter();
   }
-
+*/
   function handleAdicionarCarrinho(id) {
     const produtoSelecionado = dados.find((produto) => produto.id === id);
     const produtoJaNoCarrinho = carrinho.some(
@@ -65,8 +64,6 @@ const Produto = () => {
 
   return (
     <div>
-      <input type="text" ref={inputRef} onChange={handleChange} />
-      <button onClick={handleClick}>Pesquisar</button>
       <div className="flex">
         {filter.map((dado) => (
           <CardProduto

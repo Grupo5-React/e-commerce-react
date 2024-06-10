@@ -53,6 +53,7 @@ const Carrinho = () => {
   function handleRemoverItem(id) {
     setCarrinho(carrinho.filter((item) => item.id !== id));
   }
+
   function handleLimparCarrinho() {
     setCarrinho([]);
     alert('Carrinho Limpado com sucesso');

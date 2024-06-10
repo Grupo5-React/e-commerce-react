@@ -10,20 +10,7 @@ import ProdutoEspecifico from './Pages/ProdutoEspecifico.jsx';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min.js';
 import { useContext } from 'react';
 import Pedidos from './Pages/Pedidos.jsx';
-
-//import { autenticado } from './auth.js';
-const RotaPrivada = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      autenticado ? (
-        <Component {...props} />
-      ) : (
-        <Redirect to={{ pathname: '/', state: { from: props.location } }} />
-      )
-    }
-  />
-);
+import Navbar from './Components/Navbar/Navbar.jsx';
 
 function App() {
   const { usuarioLogado } = useContext(GlobalContext);
@@ -31,6 +18,8 @@ function App() {
     <>
       {/*  <Cabecalho/>*/}
       <BrowserRouter>
+        {/* <Cabecalho /> */}
+        <Navbar />
         <nav className="nav">
           <Link to="/login">Login</Link>
           <Link to="/cadastroUsuario">Cadastro</Link>
@@ -51,12 +40,12 @@ function App() {
           <Route path="/produtos" component={Produto} />
           <Route exact path="/produto/:id" component={ProdutoEspecifico} />
           <Route exact path="/pedido" component={Pedidos} />
-          {/* usuarioLogado ? (
+           usuarioLogado ? (
             <Route exact path="/pedido" component={Pedidos} />
           ) : (
-            <Redirect to="/login" /> */}
-          {/* )
-          <Route exact path="/carrinho" component={Carrinho} /> */}
+            <Redirect to="/login" />
+           )
+          <Route exact path="/carrinho" component={Carrinho} />
           usuarioLogado ? (
             <Route exact path="/carrinho" component={Carrinho} />
           ) : (

@@ -4,10 +4,9 @@ import Produto from './Pages/Produto';
 import Login from './Components/Login/Login';
 import CadastroUsuario from './Components/CadastroUsuario/CadastroUsuario.jsx';
 import ProdutoCategoria from './Pages/ProdutoCategoria.jsx';
-import GlobalContext, { GlobalStorage } from './hooks/GlobalContext .jsx';
+import GlobalContext from './hooks/GlobalContext .jsx';
 import Carrinho from './Pages/Carrinho.jsx';
 import ProdutoEspecifico from './Pages/ProdutoEspecifico.jsx';
-import Cabecalho from './Components/Header/header.jsx';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min.js';
 import { useContext } from 'react';
 import Pedidos from './Pages/Pedidos.jsx';
@@ -51,7 +50,11 @@ function App() {
           />
           <Route path="/produtos" component={Produto} />
           <Route exact path="/produto/:id" component={ProdutoEspecifico} />
-          <Route exact path="/pedido" component={Pedidos} />
+          usuarioLogado ? (
+            <Route exact path="/pedido" component={Pedidos} />
+          ) : (
+            <Redirect to="/login" />
+          )
           <Route exact path="/carrinho" component={Carrinho} />
           {/*usuarioLogado ? (
             <Route exact path="/carrinho" component={Carrinho} />

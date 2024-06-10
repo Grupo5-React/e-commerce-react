@@ -16,13 +16,12 @@ const CardProduto = ({
 }) => {
   return (
     <div className="card">
-      <a href="#">
+      <a  href={`/produto/${id}`}>
         <img src={img} alt={nome} className="imagem" />
         <p className="titulo">{nome}</p>
         <p>{descricao}</p>
-        <p>{preco}</p>
+        <p>R$ {preco.toFixed(2)}</p>
         <p>{categoria}</p>
-        <p>{quantidade}</p>
       </a>
       <button onClick={() => AdicionarCarrinho(id)}>
         {loading ? (

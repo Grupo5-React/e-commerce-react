@@ -1,0 +1,158 @@
+{
+  "produto": [
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/51Q5lJTUrCL._AC_SL1000_.jpg",
+      "nome": "Computador Completo Intel Core i7",
+      "descricao": "16GB SSD 1TB Monitor LED 24 Windows 10 3green 3green Top 3GT-073",
+      "preco": 1789,
+      "categoria": "Computadores",
+      "quantidade": 10,
+      "avaliacaoTotal": 29.666666666666664,
+      "qtdAvaliacoes": 8,
+      "id": "311b95"
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/51ADsKwewBL._AC_SL1000_.jpg",
+      "nome": "PC HOME OFFICE CORE I5",
+      "descricao": "3470, 16GB DDR3, SSD 240GB",
+      "preco": 685,
+      "categoria": "Computadores",
+      "quantidade": 4,
+      "avaliacaoTotal": 29,
+      "qtdAvaliacoes": 7,
+      "id": "c5b08c"
+    },
+    {
+      "id": "7a5765",
+      "imgUrl": "https://m.media-amazon.com/images/I/71OYD5szyKL._AC_SL1200_.jpg",
+      "nome": "PC Gamer Completo Mancer Intel Core i5 8ª Geração",
+      "descricao": "16GB RAM, SSD 480GB + Combo Periférico Gamer + Monitor 21",
+      "preco": 2739.9,
+      "categoria": "Computadores",
+      "quantidade": 6,
+      "avaliacaoTotal": 5,
+      "qtdAvaliacoes": 1
+    },
+    {
+      "id": "86b3cc",
+      "imgUrl": "https://m.media-amazon.com/images/I/61EAUBxgASL._AC_SL1200_.jpg",
+      "nome": "PC CPU Completo Mancer, Intel Core I5",
+      "descricao": "8GB De Memória Ram, SSD 240GB + Monitor 18.5",
+      "preco": 1229.9,
+      "categoria": "Computadores",
+      "quantidade": 3,
+      "avaliacaoTotal": 1,
+      "qtdAvaliacoes": 1
+    },
+    {
+      "id": "159ef5",
+      "imgUrl": "https://m.media-amazon.com/images/I/61GiE2virML._AC_SL1102_.jpg",
+      "nome": "Computador Intel Core I5",
+      "descricao": "8gb 240gb Ssd. Total",
+      "preco": 625,
+      "categoria": "Computadores",
+      "quantidade": 8,
+      "avaliacaoTotal": 2,
+      "qtdAvaliacoes": 1
+    },
+    {
+      "id": "d306fd",
+      "imgUrl": "https://m.media-amazon.com/images/I/61ptRAOfGjL._AC_SL1500_.jpg",
+      "nome": "PC ITX Gamer FPS Headshot",
+      "descricao": "Core I5 13400F, NVídia GeForce RTX 3060 12GB, 16GB Ram, SSD M.2 500GB",
+      "preco": 5999,
+      "categoria": "Computadores",
+      "quantidade": 6,
+      "avaliacaoTotal": 5,
+      "qtdAvaliacoes": 1
+    },
+    {
+      "id": "47b339",
+      "imgUrl": "https://m.media-amazon.com/images/I/519TJPhAMxL._AC_SL1000_.jpg",
+      "nome": "Computador Completo Slim Intel Core i5",
+      "descricao": "16GB SSD 512GB Wifi Windows 10 Pro Monitor 19 3green Office 3GO-029",
+      "preco": 1320,
+      "categoria": "Computadores",
+      "quantidade": 5,
+      "avaliacaoTotal": 4,
+      "qtdAvaliacoes": 1
+    },
+    {
+      "id": "d1b8c6",
+      "imgUrl": "https://m.media-amazon.com/images/I/61xlBnRkIxL._AC_SL1000_.jpg",
+      "nome": "Computador Completo 3green Desktop Intel Core i5",
+      "descricao": "16GB Monitor 19.5 HDMI SSD 480GB Windows 10 3D-089",
+      "preco": 1309,
+      "categoria": "Computadores",
+      "quantidade": 10,
+      "avaliacaoTotal": 5,
+      "qtdAvaliacoes": 1
+    },
+    {
+      "id": "36be9b",
+      "imgUrl": "https://m.media-amazon.com/images/I/61s+lKUxtbL._AC_SX466_.jpg",
+      "nome": "HD Interno, Barracuda Compute HDD 3.5, 4TB",
+      "descricao": "ST4000DM004, Seagate, HD interno, Prata",
+      "preco": 598,
+      "categoria": "HDs",
+      "quantidade": 25,
+      "avaliacaoTotal": 11,
+      "qtdAvaliacoes": 3
+    },
+    {
+      "id": "e1560b",
+      "imgUrl": "https://m.media-amazon.com/images/I/61nRjc+O3lL._AC_SL1500_.jpg",
+      "nome": "HD Interno 1Tb Desktop, Western Digital",
+      "descricao": "HD Interno, Prata",
+      "preco": 240,
+      "categoria": "HDs",
+      "quantidade": 30,
+      "avaliacaoTotal": 12,
+      "qtdAvaliacoes": 3
+    },
+    {
+      "imgUrl": "https://m.media-amazon.com/images/I/81m1+dsYQjL._AC_SL1500_.jpg",
+      "nome": "Hd Interno Seagate | Barracuda Compute Hdd 3, 5",
+      "descricao": "Prata, 8Tb, St8000Dm004 Seagate, Hd Interno, Prata",
+      "preco": 990,
+      "categoria": "HDs",
+      "quantidade": 45,
+      "avaliacaoTotal": 9,
+      "qtdAvaliacoes": 2,
+      "id": "801d0c"
+    },
+    {
+      "id": "736922",
+      "imgUrl": "https://m.media-amazon.com/images/I/61Np0SuI9rL._AC_SL1500_.jpg",
+      "nome": "Western Digital Disco rígido interno de vigilância",
+      "descricao": "WD Purple 4TB-SATA 6 Gb/s, cache de 256 MB, 3,5 - WD43PURZ",
+      "preco": 670,
+      "categoria": "HDs",
+      "quantidade": 22,
+      "avaliacaoTotal": 9,
+      "qtdAvaliacoes": 2
+    },
+    {
+      "id": "57752d",
+      "imgUrl": "https://m.media-amazon.com/images/I/41r+yLJX5GL._AC_SX450_.jpg",
+      "nome": "Hitachi HUA722020ALA331",
+      "descricao": "2TB 7,2K RPM 32MB SATA-3.0Gb/s HDD de 3,5 polegadas",
+      "preco": 255.61,
+      "categoria": "HDs",
+      "quantidade": 60,
+      "avaliacaoTotal": 15,
+      "qtdAvaliacoes": 3
+    },
+    {
+      "id": "4ab113",
+      "imgUrl": "https://m.media-amazon.com/images/I/41r+yLJX5GL._AC_SX450_.jpg",
+      "nome": "Hitachi HUA722020ALA331",
+      "descricao": "2TB 7,2K RPM 32MB SATA-3.0Gb/s HDD de 3,5 polegadas",
+      "preco": 255.61,
+      "categoria": "HDs",
+      "quantidade": 60,
+      "avaliacaoTotal": 10,
+      "qtdAvaliacoes": 2
+    }
+  ]
+}

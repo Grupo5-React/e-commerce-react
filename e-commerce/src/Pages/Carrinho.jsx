@@ -50,8 +50,13 @@ const Carrinho = () => {
     setCarrinho(novoCarrinho);
   }
 
-  function handleRemover(id) {
+  function handleRemoverItem(id) {
     setCarrinho(carrinho.filter((item) => item.id !== id));
+  }
+  function handleLimparCarrinho() {
+    setCarrinho([]);
+    alert('Carrinho Limpado com sucesso');
+    history.push('/produtos');
   }
 
   async function handleFinalizarCompra() {
@@ -115,13 +120,14 @@ const Carrinho = () => {
             </div>
             <p>R$ {(subTotal[id] * produto.produtoQuantidades).toFixed(2)}</p>
             <Tooltip title="Delete">
-              <IconButton onClick={() => handleRemover(produto.id)}>
+              <IconButton onClick={() => handleRemoverItem(produto.id)}>
                 <DeleteIcon />
               </IconButton>
             </Tooltip>
           </div>
         ))}
       </div>
+      <button onClick={handleLimparCarrinho}>Limpar Carrinho</button>
       <button onClick={handleFinalizarCompra}>Finalizar Compra</button>
     </div>
   );

@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './CardProduto.css';
 import Loading from '../Loading';
 import { Box, CircularProgress } from '@mui/material';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
 
 const CardProduto = ({
   id,
@@ -11,26 +14,41 @@ const CardProduto = ({
   preco,
   categoria,
   quantidade,
+  avaliacaoTotal,
+  qtdAvaliacoes,
   AdicionarCarrinho,
   loading,
 }) => {
+  const currentRating = avaliacaoTotal / qtdAvaliacoes
+  const [ratingValue, setRatingValue] = useState(currentRating)
+
   return (
     <div className="card">
-      <a  href={`/produto/${id}`}>
+      <Link to={`/produto/${id}`}>
         <img src={img} alt={nome} className="imagem" />
         <p className="titulo">{nome}</p>
         <p>{descricao}</p>
         <p>R$ {preco.toFixed(2)}</p>
         <p>{categoria}</p>
-      </a>
+      </Link>
+      <Box
+        sx={{
+          "& > legend": { mt: 2 },
+        }}
+      >
+        <Typography component="legend">Avaliação dos usuários</Typography>
+        <Rating name="read-only" value={ratingValue} readOnly />
+        <p>{ratingValue.toFixed(1)} estrelas</p>
+        <p>{qtdAvaliacoes} avaliações</p>
+      </Box>
       <button onClick={() => AdicionarCarrinho(id)}>
         {loading ? (
-          /*<Loading height={'50px'} width={'50px'} />*/
-          <Box sx={{ display: 'flex' }}>
+          // <Loading height={'50px'} width={'50px'} />
+          <Box sx={{ display: "flex" }}>
             <CircularProgress />
           </Box>
         ) : (
-          'Adicionar ao Carrinho'
+          "Adicionar ao Carrinho"
         )}
       </button>
     </div>

@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import GlobalContext from "../hooks/GlobalContext ";
 
 const ProdutoEspecifico = () => {
-  const { carrinho, dados, filter, setCarrinho, setDados, setFilter } =
+  const { carrinho, dados, filter, usuarioLogado, setCarrinho, setDados, setFilter } =
   useContext(GlobalContext);
   const { id } = useParams()
   const [produto, setProduto] = useState({})
@@ -80,26 +80,35 @@ const ProdutoEspecifico = () => {
         <Rating name="read-only" value={ratingValue} readOnly />
         <p>{ratingValue.toFixed(1)} estrelas</p>
         <p>{produto.qtdAvaliacoes} avaliações</p>
-        {
-          !isRated ?
-          <>
-            <Typography component="legend">Sua avaliação sobre este produto</Typography>
-            <Rating
-              name="simple-controlled"
-              value={ratingValue}
-              onChange={(event, newRating) => {
-                updateRating(newRating)
-                setUserRating(newRating)
-                setIsRated(true)
-              }}
-            />
-          </>
-          :
-          <>
-            <Typography component="legend">Obrigado por avaliar este produto!</Typography>
-            <Rating name="disabled" value={userRating} disabled />
-          </>
-        }
+        {usuarioLogado ? (
+          !isRated ? (
+            <>
+              <Typography component="legend">
+                Sua avaliação sobre este produto
+              </Typography>
+              <Rating
+                name="simple-controlled"
+                value={ratingValue}
+                onChange={(event, newRating) => {
+                  updateRating(newRating);
+                  setUserRating(newRating);
+                  setIsRated(true);
+                }}
+              />
+            </>
+          ) : (
+            <>
+              <Typography component="legend">
+                Obrigado por avaliar este produto!
+              </Typography>
+              <Rating name="disabled" value={userRating} disabled />
+            </>
+          )
+        ) : (
+          <Typography component="legend">
+            Faça login para avaliar este produto!
+          </Typography>
+        )}
       </Box>
 
       <button onClick={() => handleAdicionarCarrinho(id)}>

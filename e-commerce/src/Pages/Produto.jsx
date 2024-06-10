@@ -49,7 +49,7 @@ const Produto = () => {
           },
         ]);
       } else {
-        console.log('ja selecionado');
+        alert('Produto já adicionado ao carrinho');
       }
       setLoading(false);
     }, 800);
@@ -70,6 +70,8 @@ const Produto = () => {
             preco={dado.preco}
             categoria={dado.categoria}
             quantidade={dado.quantidade}
+            avaliacaoTotal={dado.avaliacaoTotal}
+            qtdAvaliacoes={dado.qtdAvaliacoes}
             loading={loading}
             AdicionarCarrinho={handleAdicionarCarrinho}
           />

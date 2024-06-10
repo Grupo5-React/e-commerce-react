@@ -11,27 +11,15 @@ import Cabecalho from './Components/Header/header.jsx';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min.js';
 import { useContext } from 'react';
 import Pedidos from './Pages/Pedidos.jsx';
-
-//import { autenticado } from './auth.js';
-const RotaPrivada = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      autenticado ? (
-        <Component {...props} />
-      ) : (
-        <Redirect to={{ pathname: '/', state: { from: props.location } }} />
-      )
-    }
-  />
-);
+import Navbar from './Components/Navbar/Navbar.jsx';
 
 function App() {
   const { usuarioLogado } = useContext(GlobalContext);
   return (
     <>
       <BrowserRouter>
-        <Cabecalho />
+        {/* <Cabecalho /> */}
+        <Navbar />
         {/*<nav className="nav">
           <Link to="/login">Login</Link>
           <Link to="/cadastroUsuario">Cadastro</Link>

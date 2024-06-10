@@ -77,7 +77,7 @@ const Carrinho = () => {
     });
     setPedido([...pedido, { ...itensPedido, total }]);
 
-    const response = await api.post('/pedido/', {
+     await api.post('/pedido/', {
       valorTotal: total,
       idUser: usuarioLogado.id,
       itens: itensPedido,
@@ -85,7 +85,7 @@ const Carrinho = () => {
 
     alterarQuantidade.forEach(async (item) => {
       try {
-        const respose = await api.patch(`/produto/${item.idProduto}`, {
+        const response = await api.patch(`/produto/${item.idProduto}`, {
           quantidade: item.quantidade,
         });
         console.log(

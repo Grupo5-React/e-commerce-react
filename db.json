@@ -15,7 +15,7 @@
       "preco": 5585.9,
       "categoria": "Notebooks",
       "quantidade": 12,
-      "avaliacaoTotal": 17,
+      "avaliacaoTotal": 10,
       "qtdAvaliacoes": 2,
       "id": "e71f"
     },
@@ -26,7 +26,7 @@
       "preco": 5585,
       "categoria": "Notebooks",
       "quantidade": 10,
-      "avaliacaoTotal": 29,
+      "avaliacaoTotal": 39,
       "qtdAvaliacoes": 9,
       "id": "6dfa"
     },
@@ -37,8 +37,8 @@
       "preco": 5699,
       "categoria": "Notebooks",
       "quantidade": 17,
-      "avaliacaoTotal": 5,
-      "qtdAvaliacoes": 2,
+      "avaliacaoTotal": 13,
+      "qtdAvaliacoes": 3,
       "id": "6b98"
     },
     {
@@ -59,7 +59,7 @@
       "preco": 2919,
       "categoria": "Notebooks",
       "quantidade": 10,
-      "avaliacaoTotal": 12,
+      "avaliacaoTotal": 5,
       "qtdAvaliacoes": 1,
       "id": "5297"
     },
@@ -70,7 +70,7 @@
       "preco": 1557,
       "categoria": "Notebooks",
       "quantidade": 15,
-      "avaliacaoTotal": 15,
+      "avaliacaoTotal": 4,
       "qtdAvaliacoes": 1,
       "id": "64eb"
     },
@@ -81,7 +81,7 @@
       "preco": 2546,
       "categoria": "Notebooks",
       "quantidade": 8,
-      "avaliacaoTotal": 24,
+      "avaliacaoTotal": 4,
       "qtdAvaliacoes": 1,
       "id": "26c2"
     },
@@ -125,7 +125,7 @@
       "preco": 2870.02,
       "categoria": "Computadores",
       "quantidade": 5,
-      "avaliacaoTotal": 29,
+      "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
       "id": "4199"
     },
@@ -136,7 +136,7 @@
       "preco": 1210.01,
       "categoria": "Computadores",
       "quantidade": 5,
-      "avaliacaoTotal": 39,
+      "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
       "id": "e24b"
     },
@@ -147,7 +147,7 @@
       "preco": 1789,
       "categoria": "Computadores",
       "quantidade": 10,
-      "avaliacaoTotal": 18,
+      "avaliacaoTotal": 14,
       "qtdAvaliacoes": 3,
       "id": "d872"
     },
@@ -158,7 +158,7 @@
       "preco": 685,
       "categoria": "Computadores",
       "quantidade": 4,
-      "avaliacaoTotal": 16,
+      "avaliacaoTotal": 12,
       "qtdAvaliacoes": 3,
       "id": "69b1"
     },
@@ -169,7 +169,7 @@
       "preco": 2739.9,
       "categoria": "Computadores",
       "quantidade": 6,
-      "avaliacaoTotal": 14,
+      "avaliacaoTotal": 7,
       "qtdAvaliacoes": 2,
       "id": "84e7"
     },
@@ -180,7 +180,7 @@
       "preco": 1229.9,
       "categoria": "Computadores",
       "quantidade": 3,
-      "avaliacaoTotal": 24,
+      "avaliacaoTotal": 4,
       "qtdAvaliacoes": 3,
       "id": "b0cd"
     },
@@ -202,7 +202,7 @@
       "preco": 5999,
       "categoria": "Computadores",
       "quantidade": 6,
-      "avaliacaoTotal": 15,
+      "avaliacaoTotal": 10,
       "qtdAvaliacoes": 2,
       "id": "c1f9"
     },
@@ -213,7 +213,7 @@
       "preco": 1320,
       "categoria": "Computadores",
       "quantidade": 5,
-      "avaliacaoTotal": 25,
+      "avaliacaoTotal": 20,
       "qtdAvaliacoes": 4,
       "id": "e61c"
     },
@@ -224,7 +224,7 @@
       "preco": 1309,
       "categoria": "Computadores",
       "quantidade": 10,
-      "avaliacaoTotal": 18,
+      "avaliacaoTotal": 13,
       "qtdAvaliacoes": 3,
       "id": "58f0"
     },
@@ -246,7 +246,7 @@
       "preco": 41.54,
       "categoria": "Suprimentos",
       "quantidade": 90,
-      "avaliacaoTotal": 18,
+      "avaliacaoTotal": 12,
       "qtdAvaliacoes": 3,
       "id": "90a0"
     },
@@ -257,7 +257,7 @@
       "preco": 26.99,
       "categoria": "Suprimentos",
       "quantidade": 34,
-      "avaliacaoTotal": 28,
+      "avaliacaoTotal": 18,
       "qtdAvaliacoes": 4,
       "id": "2820"
     },
@@ -279,7 +279,7 @@
       "preco": 57.6,
       "categoria": "Suprimentos",
       "quantidade": 30,
-      "avaliacaoTotal": 18,
+      "avaliacaoTotal": 8,
       "qtdAvaliacoes": 3,
       "id": "86b5"
     },
@@ -290,7 +290,7 @@
       "preco": 79.9,
       "categoria": "Suprimentos",
       "quantidade": 8,
-      "avaliacaoTotal": 19,
+      "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
       "id": "f1a3"
     },
@@ -301,7 +301,7 @@
       "preco": 165.99,
       "categoria": "Suprimentos",
       "quantidade": 20,
-      "avaliacaoTotal": 17,
+      "avaliacaoTotal": 7,
       "qtdAvaliacoes": 5,
       "id": "7427"
     },
@@ -312,7 +312,7 @@
       "preco": 52.99,
       "categoria": "Suprimentos",
       "quantidade": 5,
-      "avaliacaoTotal": 18,
+      "avaliacaoTotal": 8,
       "qtdAvaliacoes": 4,
       "id": "34e5"
     },
@@ -334,7 +334,7 @@
       "preco": 120,
       "categoria": "Suprimentos",
       "quantidade": 20,
-      "avaliacaoTotal": 16,
+      "avaliacaoTotal": 6,
       "qtdAvaliacoes": 3,
       "id": "10b1"
     },
@@ -345,7 +345,7 @@
       "preco": 598,
       "categoria": "HDs",
       "quantidade": 25,
-      "avaliacaoTotal": 15,
+      "avaliacaoTotal": 5,
       "qtdAvaliacoes": 2,
       "id": "3ae5"
     },
@@ -356,7 +356,7 @@
       "preco": 240,
       "categoria": "HDs",
       "quantidade": 30,
-      "avaliacaoTotal": 19,
+      "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
       "id": "1b7d"
     },
@@ -400,7 +400,7 @@
       "preco": 1329.99,
       "categoria": "HDs",
       "quantidade": 10,
-      "avaliacaoTotal": 16,
+      "avaliacaoTotal": 6,
       "qtdAvaliacoes": 3,
       "id": "733f"
     },
@@ -411,7 +411,7 @@
       "preco": 509.91,
       "categoria": "HDs",
       "quantidade": 14,
-      "avaliacaoTotal": 18,
+      "avaliacaoTotal": 8,
       "qtdAvaliacoes": 3,
       "id": "2b14"
     },
@@ -422,7 +422,7 @@
       "preco": 1305,
       "categoria": "HDs",
       "quantidade": 30,
-      "avaliacaoTotal": 19,
+      "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
       "id": "23dd"
     },
@@ -433,7 +433,7 @@
       "preco": 690,
       "categoria": "HDs",
       "quantidade": 12,
-      "avaliacaoTotal": 15,
+      "avaliacaoTotal": 5,
       "qtdAvaliacoes": 2,
       "id": "5ca4"
     },
@@ -444,7 +444,7 @@
       "preco": 487.9,
       "categoria": "HDs",
       "quantidade": 10,
-       "avaliacaoTotal": 18,
+      "avaliacaoTotal": 18,
       "qtdAvaliacoes": 5,
       "id": "7597"
     }

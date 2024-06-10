@@ -1,16 +1,20 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { api } from "../api/api"
 import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+import GlobalContext from "../hooks/GlobalContext ";
 
 const ProdutoEspecifico = () => {
+  const { carrinho, dados, filter, setCarrinho, setDados, setFilter } =
+  useContext(GlobalContext);
   const { id } = useParams()
   const [produto, setProduto] = useState({})
   const [ratingValue, setRatingValue] = useState(0)
   const [isRated, setIsRated] = useState(false)
   const [userRating, setUserRating] = useState(0)
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     getProductById()
@@ -23,8 +27,6 @@ const ProdutoEspecifico = () => {
   }
 
   const updateRating = async (newRating) => {
-
-
     const response = await api.put(`/produto/${id}`, {
       imgUrl: produto.imgUrl,
       nome: produto.nome,
@@ -39,6 +41,28 @@ const ProdutoEspecifico = () => {
     setRatingValue(response.data.avaliacaoTotal / response.data.qtdAvaliacoes)
   }
 
+  function handleAdicionarCarrinho(id) {
+    const produtoSelecionado = produto
+    const produtoJaNoCarrinho = carrinho.some(
+      (produto) => produto.id === produtoSelecionado.id,
+    );
+    setLoading(true);
+    setTimeout(() => {
+      if (!produtoJaNoCarrinho) {
+        setCarrinho([
+          ...carrinho,
+          {
+            ...produtoSelecionado,
+            produtoQuantidades: 1,
+          },
+        ]);
+      } else {
+        alert('Produto já adicionado ao carrinho');
+      }
+      setLoading(false);
+    }, 800);
+  }
+
 
   return (
     <>
@@ -47,7 +71,6 @@ const ProdutoEspecifico = () => {
       <img src={produto.imgUrl} alt={produto.nome} />
       <p>{produto.descricao}</p>
       <p>R$ {produto.preco}</p>
-
       <Box
         sx={{
           "& > legend": { mt: 2 },
@@ -79,7 +102,7 @@ const ProdutoEspecifico = () => {
         }
       </Box>
 
-      <button onClick={() => AdicionarCarrinho(id)}>
+      <button onClick={() => handleAdicionarCarrinho(id)}>
         Adicionar ao Carrinho
       </button>
     </>

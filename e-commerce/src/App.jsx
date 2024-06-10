@@ -30,9 +30,9 @@ function App() {
   const { usuarioLogado } = useContext(GlobalContext);
   return (
     <>
-      {/*  <Cabecalho/>*/}
       <BrowserRouter>
-        <nav className="nav">
+        <Cabecalho />
+        {/*<nav className="nav">
           <Link to="/login">Login</Link>
           <Link to="/cadastroUsuario">Cadastro</Link>
           <Link to="/produtos">Produtos</Link>
@@ -40,7 +40,7 @@ function App() {
           <Link to="/produtos/notebooks">Notebooks</Link>
           <Link to="/produtos/suprimentos">Suprimentos</Link>
           <Link to="/carrinho">carrinho</Link>
-        </nav>
+        </nav> */}
         <Switch>
           <Route exact path="/login" component={Login} />
           <Route path="/cadastroUsuario" component={CadastroUsuario} />
@@ -56,7 +56,7 @@ function App() {
           {/*usuarioLogado ? (
             <Route exact path="/carrinho" component={Carrinho} />
           ) : (
-            <Redirect to="/" />
+            <Redirect to="/login" />
           )*/}
         </Switch>
       </BrowserRouter>

@@ -1,7 +1,7 @@
-import {Toolbar, Typography } from "@mui/material";
+import { Toolbar, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-export default function Cabecalho(){
-
+export default function Cabecalho() {
   // const handleClickLogin = () => {
   //   window.open('/login');
   // };
@@ -18,26 +18,36 @@ export default function Cabecalho(){
   //   window.open('/login');
   // };
 
-    return(
-        <div>
+  return (
+    <div>
       <Toolbar>
-        <Typography variant="h6" component="div">
-        </Typography>
+        <Typography variant="h6" component="div"></Typography>
         <nav>
-          <button onClick={()=>{window.open('/login','_self');}}>Login</button>
-          <button onClick={()=>{window.open('/cadastroUsuario', '_self');}}>Cadastro Usuario</button>
-          <button onClick={()=>{window.open('/produtos', '_self');}}>Produtos</button>
-          <button onClick={()=>{window.open('/produtos/hds', '_self');}}>HDS</button>
-          <button onClick={()=>{window.open('/produtos/notebooks','_self');}}>Notebooks</button>
-          <button onClick={()=>{window.open('/produtos/suprimentos','_self');}}>Suprimentos</button>
-          <button onClick={()=>{window.open('/carrinho','_self');}}>Carrinho</button>
+          <Link to="/login">
+            <button>Login</button>
+          </Link>
+          <Link to="/login">
+            <button>Cadastro Usuario</button>
+          </Link>
+          <Link to="/produtos">
+            <button>Produtos</button>
+          </Link>
+          <Link to="/produtos/hds">
+            <button>HDS</button>
+          </Link>
+          <Link to="/produtos/notebooks">
+            <button>Notebooks</button>
+          </Link>
+          <Link to="/produtos/suprimentos">
+            <button>Suprimentos</button>
+          </Link>
+          <Link to="/carrinho">
+            <button>Carrinho</button>
+          </Link>
         </nav>
       </Toolbar>
       {/* O conteúdo do seu aplicativo vai abaixo da barra de ferramentas */}
-      <div>
-        {/* Seu conteúdo aqui */}
-      </div>
+      <div>{/* Seu conteúdo aqui */}</div>
     </div>
   );
 }
-

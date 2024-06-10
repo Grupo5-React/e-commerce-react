@@ -1,9 +1,16 @@
 import React, { useContext, useState } from 'react';
 import GlobalContext from '../hooks/GlobalContext ';
 import { api } from '../api/api';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
+import './Carrinho.css';
 
 const Carrinho = () => {
-  const { carrinho, setCarrinho } = useContext(GlobalContext);
+  const { carrinho, pedido, setCarrinho, setPedido, usuarioLogado } =
+    useContext(GlobalContext);
+  const history = useHistory();
 
   const [subTotal, setSubTotal] = useState(
     carrinho.map((produto) => produto.preco),
@@ -11,13 +18,16 @@ const Carrinho = () => {
 
   function handleAumentar(id) {
     const novoCarrinho = carrinho.map((item) => {
-      if (item.id === id && item.quantidade > item.produtoQuantidades) {
-        return {
-          ...item,
-          produtoQuantidades: item.produtoQuantidades + 1,
-        };
+      if (item.id === id) {
+        if (item.id === id && item.quantidade > item.produtoQuantidades) {
+          return {
+            ...item,
+            produtoQuantidades: item.produtoQuantidades + 1,
+          };
+        } else {
+          console.log('produto limite no estoque');
+        }
       }
-      console.log('produto limite no estoque');
       return item;
     });
     setCarrinho(novoCarrinho);
@@ -25,11 +35,15 @@ const Carrinho = () => {
 
   function handleDiminuir(id) {
     const novoCarrinho = carrinho.map((item) => {
-      if (item.id === id && item.produtoQuantidades > 1) {
-        return {
-          ...item,
-          produtoQuantidades: item.produtoQuantidades - 1,
-        };
+      if (item.id === id) {
+        if (item.id === id && item.produtoQuantidades > 1) {
+          return {
+            ...item,
+            produtoQuantidades: item.produtoQuantidades - 1,
+          };
+        } else {
+          console.log('quantidade menor que 1');
+        }
       }
       return item;
     });
@@ -56,12 +70,14 @@ const Carrinho = () => {
         quantidade: item.quantidade - item.produtoQuantidades,
       });
     });
-    console.log('essa é quantidade ', alterarQuantidade);
+    setPedido([...pedido, { ...itensPedido, total }]);
+
     const response = await api.post('/pedido/', {
       valorTotal: total,
-      idUser: '8b15',
+      idUser: usuarioLogado.id,
       itens: itensPedido,
     });
+
     alterarQuantidade.forEach(async (item) => {
       try {
         const respose = await api.patch(`/produto/${item.idProduto}`, {
@@ -75,23 +91,37 @@ const Carrinho = () => {
         console.error(`Erro ao atualizar o produto ${item.idProduto}:`, error);
       }
     });
+
+    history.push('/pedido');
   }
+
+  console.log('essa é quantidadeasdasd ', pedido);
   return (
-    <div>
-      {carrinho.map((produto, id) => (
-        <div key={produto.id}>
-          <p>{produto.nome}</p>
-          <p>{subTotal[id] * produto.produtoQuantidades}</p>
-          <p>{produto.categoria}</p>
-          <p>{produto.produtoQuantidades}</p>
-          <button onClick={() => handleDiminuir(produto.id)}>-</button>
-          <button onClick={() => handleAumentar(produto.id)}>+</button>
-          <br />
-          <button onClick={() => handleRemover(produto.id)}>
-            Remover Item
-          </button>
-        </div>
-      ))}
+    <div className="container">
+      <div className="item">
+        {carrinho.map((produto, id) => (
+          <div key={produto.id} className="flex_carrinho">
+            <div className="flex_carrinho_img">
+              <img src={produto.imgUrl} alt={produto.nome} />
+            </div>
+            <div>
+              <p>{produto.nome}</p>
+              <p>{produto.categoria}</p>
+            </div>
+            <div className="flex_btn">
+              <button onClick={() => handleDiminuir(produto.id)}>-</button>
+              <p>{produto.produtoQuantidades}</p>
+              <button onClick={() => handleAumentar(produto.id)}>+</button>
+            </div>
+            <p>R$ {(subTotal[id] * produto.produtoQuantidades).toFixed(2)}</p>
+            <Tooltip title="Delete">
+              <IconButton onClick={() => handleRemover(produto.id)}>
+                <DeleteIcon />
+              </IconButton>
+            </Tooltip>
+          </div>
+        ))}
+      </div>
       <button onClick={handleFinalizarCompra}>Finalizar Compra</button>
     </div>
   );

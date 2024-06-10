@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { api } from '../api/api';
 import GlobalContext from '../hooks/GlobalContext ';
+import "./Pedido.css"
 
 const Pedidos = () => {
   const { usuarioLogado, carrinho } = useContext(GlobalContext);
@@ -25,7 +26,7 @@ const Pedidos = () => {
   }
 
   return (
-    <div>
+    <div className='Pedido'>
       {pedidos.map((pedido) => (
         <div key={pedido.id}>
           <p>Número do pedido: {pedido.id} </p>
@@ -37,6 +38,7 @@ const Pedidos = () => {
             </div>
           ))}
           <p>Total:${pedido.valorTotal} </p>
+          <hr />
         </div>
       ))}
     </div>

@@ -1,0 +1,24 @@
+.Pedido {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    color: white;
+  }
+  
+  .Pedido div {
+    margin-bottom: 10px;
+  }
+  
+  .Pedido img {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  
+  .Pedido p {
+    margin: 5px 0;
+  }
+  
+  .Pedido p:first-child {
+    font-weight: bold;
+  }

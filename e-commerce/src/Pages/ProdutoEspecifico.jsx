@@ -1,51 +1,73 @@
-import { useContext, useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import { api } from "../api/api"
+import { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { api } from "../api/api";
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import GlobalContext from "../hooks/GlobalContext ";
 
 const ProdutoEspecifico = () => {
-  const { carrinho, dados, filter, usuarioLogado, setCarrinho, setDados, setFilter } =
-  useContext(GlobalContext);
-  const { id } = useParams()
-  const [produto, setProduto] = useState({})
-  const [ratingValue, setRatingValue] = useState(0)
-  const [isRated, setIsRated] = useState(false)
-  const [userRating, setUserRating] = useState(0)
+  const { carrinho, usuarioLogado, setCarrinho } = useContext(GlobalContext);
+  const { id } = useParams();
+  const [produto, setProduto] = useState({});
+  const [ratingValue, setRatingValue] = useState(0);
+  const [userRating, setUserRating] = useState(0);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getProductById()
-  }, [])
+    getProductById();
+  }, []);
+
+  useEffect(() => {
+    if (produto.avaliacoes) {
+      const userRating = produto.avaliacoes.find(avaliacao => avaliacao.idUsuario === usuarioLogado?.id);
+      if (userRating) {
+        setUserRating(userRating.nota);
+      }
+    }
+  }, [produto, usuarioLogado]);
 
   const getProductById = async () => {
-    const response = await api.get(`/produto/${id}`)
-    setProduto(response.data)
-    setRatingValue(response.data.avaliacaoTotal / response.data.qtdAvaliacoes)
-  }
+    try {
+      const response = await api.get(`/produto/${id}`);
+      setProduto(response.data);
+      setRatingValue(response.data.avaliacaoTotal / response.data.qtdAvaliacoes);
+    } catch (error) {
+      console.error("Failed to fetch product", error);
+    }
+  };
 
   const updateRating = async (newRating) => {
-    const response = await api.put(`/produto/${id}`, {
-      imgUrl: produto.imgUrl,
-      nome: produto.nome,
-      descricao: produto.descricao,
-      preco: produto.preco,
-      categoria: produto.categoria,
-      quantidade: produto.quantidade,
-      avaliacaoTotal: produto.avaliacaoTotal + newRating,
-      qtdAvaliacoes: produto.qtdAvaliacoes + 1
-    })
-    setProduto(response.data)
-    setRatingValue(response.data.avaliacaoTotal / response.data.qtdAvaliacoes)
-  }
+    const existingRating = produto.avaliacoes.find(avaliacao => avaliacao.idUsuario === usuarioLogado.id);
+    const newAvaliacaoTotal = existingRating ? 
+      produto.avaliacaoTotal - existingRating.nota + newRating : 
+      produto.avaliacaoTotal + newRating;
+    const newQtdAvaliacoes = existingRating ? produto.qtdAvaliacoes : produto.qtdAvaliacoes + 1;
+    
+    const updatedAvaliacoes = existingRating ? 
+      produto.avaliacoes.map(avaliacao => 
+        avaliacao.idUsuario === usuarioLogado.id ? { ...avaliacao, nota: newRating } : avaliacao
+      ) : 
+      [...produto.avaliacoes, { idUsuario: usuarioLogado.id, nota: newRating }];
 
-  function handleAdicionarCarrinho(id) {
-    const produtoSelecionado = produto
-    const produtoJaNoCarrinho = carrinho.some(
-      (produto) => produto.id === produtoSelecionado.id,
-    );
+    try {
+      const response = await api.put(`/produto/${id}`, {
+        ...produto,
+        avaliacaoTotal: newAvaliacaoTotal,
+        qtdAvaliacoes: newQtdAvaliacoes,
+        avaliacoes: updatedAvaliacoes
+      });
+      setProduto(response.data);
+      setRatingValue(response.data.avaliacaoTotal / response.data.qtdAvaliacoes);
+      setUserRating(newRating);
+    } catch (error) {
+      console.error("Failed to update rating", error);
+    }
+  };
+
+  const handleAdicionarCarrinho = (id) => {
+    const produtoSelecionado = produto;
+    const produtoJaNoCarrinho = carrinho.some(prod => prod.id === produtoSelecionado.id);
     setLoading(true);
     setTimeout(() => {
       if (!produtoJaNoCarrinho) {
@@ -61,8 +83,11 @@ const ProdutoEspecifico = () => {
       }
       setLoading(false);
     }, 800);
-  }
+  };
 
+  const isProductRatedByCurrentUser = () => {
+    return produto.avaliacoes?.some(avaliacao => avaliacao.idUsuario === usuarioLogado?.id);
+  };
 
   return (
     <>
@@ -71,51 +96,36 @@ const ProdutoEspecifico = () => {
       <img src={produto.imgUrl} alt={produto.nome} />
       <p>{produto.descricao}</p>
       <p>R$ {produto.preco}</p>
-      <Box
-        sx={{
-          "& > legend": { mt: 2 },
-        }}
-      >
+      <Box sx={{ "& > legend": { mt: 2 } }}>
         <Typography component="legend">Avaliação dos usuários</Typography>
         <Rating name="read-only" value={ratingValue} readOnly />
         <p>{ratingValue.toFixed(1)} estrelas</p>
         <p>{produto.qtdAvaliacoes} avaliações</p>
         {usuarioLogado ? (
-          !isRated ? (
+          !isProductRatedByCurrentUser() ? (
             <>
-              <Typography component="legend">
-                Sua avaliação sobre este produto
-              </Typography>
+              <Typography component="legend">Sua avaliação sobre este produto</Typography>
               <Rating
                 name="simple-controlled"
-                value={ratingValue}
+                value={userRating}
                 onChange={(event, newRating) => {
                   updateRating(newRating);
-                  setUserRating(newRating);
-                  setIsRated(true);
                 }}
               />
             </>
           ) : (
             <>
-              <Typography component="legend">
-                Obrigado por avaliar este produto!
-              </Typography>
+              <Typography component="legend">Obrigado por avaliar este produto!</Typography>
               <Rating name="disabled" value={userRating} disabled />
             </>
           )
         ) : (
-          <Typography component="legend">
-            Faça login para avaliar este produto!
-          </Typography>
+          <Typography component="legend">Faça login para avaliar este produto!</Typography>
         )}
       </Box>
-
-      <button onClick={() => handleAdicionarCarrinho(id)}>
-        Adicionar ao Carrinho
-      </button>
+      <button onClick={() => handleAdicionarCarrinho(id)}>Adicionar ao Carrinho</button>
     </>
   );
-}
+};
 
-export default ProdutoEspecifico
+export default ProdutoEspecifico;

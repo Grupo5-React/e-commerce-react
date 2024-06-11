@@ -6,9 +6,12 @@ import "./Pedido.css"
 const Pedidos = () => {
   const { usuarioLogado, carrinho } = useContext(GlobalContext);
   const [pedidos, setPedidos] = useState([]);
-
+  const [produtos, setProdutos] = useState([]);
+  
+  
   useEffect(() => {
     getPedido();
+    getProduto();
   }, []);
 
   async function getPedido() {
@@ -24,19 +27,31 @@ const Pedidos = () => {
       console.error('Erro ao buscar pedidos:', error);
     }
   }
+  
+  const getProduto = async ()=>{
+    const response = await api.get('/produto');
+    setProdutos(response.data);
+  }
 
   return (
     <div className='Pedido'>
       {pedidos.map((pedido) => (
         <div key={pedido.id}>
           <p>Número do pedido: {pedido.id} </p>
-          {carrinho.map((item) => (
-            <div key={item.id}>
-              <img src={item.imgUrl} alt={item.nome} />
-              <p>Produto: {item.nome} </p>
-              <p>Quantidade: {item.produtoQuantidades}</p>
-            </div>
-          ))}
+          {pedido.itens.map((item) => {
+            const produto = produtos.find((produto) => produto.id === item.idProduto);
+            if (produto) {
+              return (
+                <div key={item.id}>
+                  <img src={produto.imgUrl} alt={produto.nome} />
+                  <p>Produto: {produto.nome} </p>
+                  <p>Quantidade: {item.quantidade}</p>
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
           <p>Total:${pedido.valorTotal} </p>
           <hr />
         </div>

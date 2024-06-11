@@ -20,7 +20,7 @@
       "descricao": "360 Windows 11 Home Intel Core i7-1360P 16GB 512 GB SSD 15.6 Full HD AMOLED 1.46 kg",
       "preco": 5585.9,
       "categoria": "Notebooks",
-      "quantidade": 7,
+      "quantidade": 5,
       "avaliacaoTotal": 117,
       "qtdAvaliacoes": 26,
       "avaliacoes": [
@@ -43,7 +43,7 @@
       "descricao": "NVIDIA RTX3050, Intel Core I5, 8GB, 512GB, KeepOS, Tela de 15,6, Cinza - FX507ZC4-HN100",
       "preco": 5585,
       "categoria": "Notebooks",
-      "quantidade": 9,
+      "quantidade": 6,
       "avaliacaoTotal": 59,
       "qtdAvaliacoes": 14,
       "avaliacoes": [],
@@ -593,6 +593,21 @@
         },
         {
           "idProduto": "52ab",
+          "quantidade": 3
+        }
+      ]
+    },
+    {
+      "id": "b62f",
+      "valorTotal": 27926.8,
+      "idUser": "8b15",
+      "itens": [
+        {
+          "idProduto": "e71f",
+          "quantidade": 2
+        },
+        {
+          "idProduto": "6dfa",
           "quantidade": 3
         }
       ]

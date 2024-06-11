@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './CardProduto.css';
 import Loading from '../Loading';
-import { Box, CircularProgress } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+import { Box, CircularProgress } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const CardProduto = ({

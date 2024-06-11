@@ -23,8 +23,8 @@ function App() {
             path="/produtos/:categoria"
             component={ProdutoCategoria}
           />
-          <Route path="/" component={Produto} />
-          <Route path="/produtos" component={Produto} />
+          <Route exact path="/" component={Produto} />
+          <Route exact path="/produtos" component={Produto} />
           <Route exact path="/produto/:id" component={ProdutoEspecifico} />
           <Route exact path="/pedido" component={Pedidos} />
           <Route exact path="/carrinho" component={Carrinho} />

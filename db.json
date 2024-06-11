@@ -14,9 +14,9 @@
       "descricao": "360 Windows 11 Home Intel Core i7-1360P 16GB 512 GB SSD 15.6 Full HD AMOLED 1.46 kg",
       "preco": 5585.9,
       "categoria": "Notebooks",
-      "quantidade": 12,
-      "avaliacaoTotal": 24,
-      "qtdAvaliacoes": 6,
+      "quantidade": 7,
+      "avaliacaoTotal": 89,
+      "qtdAvaliacoes": 20,
       "id": "e71f"
     },
     {
@@ -25,9 +25,9 @@
       "descricao": "NVIDIA RTX3050, Intel Core I5, 8GB, 512GB, KeepOS, Tela de 15,6, Cinza - FX507ZC4-HN100",
       "preco": 5585,
       "categoria": "Notebooks",
-      "quantidade": 10,
-      "avaliacaoTotal": 44,
-      "qtdAvaliacoes": 10,
+      "quantidade": 9,
+      "avaliacaoTotal": 54,
+      "qtdAvaliacoes": 12,
       "id": "6dfa"
     },
     {
@@ -36,7 +36,7 @@
       "descricao": "Ryzen 7 4600h 16gb 256gb Ssd Linux Keep Os 15,6 Led Prata",
       "preco": 5699,
       "categoria": "Notebooks",
-      "quantidade": 17,
+      "quantidade": 16,
       "avaliacaoTotal": 13,
       "qtdAvaliacoes": 3,
       "id": "6b98"
@@ -59,8 +59,8 @@
       "preco": 2919,
       "categoria": "Notebooks",
       "quantidade": 10,
-      "avaliacaoTotal": 5,
-      "qtdAvaliacoes": 1,
+      "avaliacaoTotal": 8,
+      "qtdAvaliacoes": 2,
       "id": "5297"
     },
     {
@@ -113,7 +113,7 @@
       "descricao": "8GB 256GB SSD 15,6” - Windows 11",
       "preco": 2294.1,
       "categoria": "Notebooks",
-      "quantidade": 8,
+      "quantidade": 5,
       "avaliacaoTotal": 17,
       "qtdAvaliacoes": 4,
       "id": "52ab"
@@ -124,7 +124,7 @@
       "descricao": "21,5 Full HD 16GB SSD 512GB 4 Núcleos Super Turbo Hdmi Teclado e Mouse",
       "preco": 2870.02,
       "categoria": "Computadores",
-      "quantidade": 5,
+      "quantidade": 3,
       "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
       "id": "4199"
@@ -289,9 +289,9 @@
       "descricao": "Impressora 2774 Valejet",
       "preco": 79.9,
       "categoria": "Suprimentos",
-      "quantidade": 8,
-      "avaliacaoTotal": 9,
-      "qtdAvaliacoes": 2,
+      "quantidade": 7,
+      "avaliacaoTotal": 13,
+      "qtdAvaliacoes": 3,
       "id": "f1a3"
     },
     {
@@ -462,6 +462,81 @@
         {
           "idProduto": "6dfa",
           "quantidade": 2
+        }
+      ]
+    },
+    {
+      "id": "ed5c",
+      "valorTotal": 5665.799999999999,
+      "idUser": "8b15",
+      "itens": [
+        {
+          "idProduto": "f1a3",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "e71f",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "85e7",
+      "valorTotal": 16869.9,
+      "idUser": "8b15",
+      "itens": [
+        {
+          "idProduto": "e71f",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "6dfa",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "6b98",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "715c",
+      "valorTotal": 5585.9,
+      "idUser": "8b15",
+      "itens": [
+        {
+          "idProduto": "e71f",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "6535",
+      "valorTotal": 5585.9,
+      "idUser": "8b15",
+      "itens": [
+        {
+          "idProduto": "e71f",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "d22a",
+      "valorTotal": 23794.14,
+      "idUser": "8b15",
+      "itens": [
+        {
+          "idProduto": "e71f",
+          "quantidade": 2
+        },
+        {
+          "idProduto": "4199",
+          "quantidade": 2
+        },
+        {
+          "idProduto": "52ab",
+          "quantidade": 3
         }
       ]
     }

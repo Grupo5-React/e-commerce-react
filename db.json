@@ -17,16 +17,7 @@
       "quantidade": 7,
       "avaliacaoTotal": 108,
       "qtdAvaliacoes": 24,
-      "avaliacoes": [
-        {
-          "id": "8b15",
-          "nota": 4
-        },
-        {
-          "idUsuario": "8b15",
-          "nota": 5
-        }
-      ],
+      "avaliacoes": [],
       "id": "e71f"
     },
     {
@@ -38,16 +29,7 @@
       "quantidade": 9,
       "avaliacaoTotal": 59,
       "qtdAvaliacoes": 14,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        },
-        {
-          "idUsuario": "8b15",
-          "nota": 5
-        }
-      ],
+      "avaliacoes": [],
       "id": "6dfa"
     },
     {
@@ -59,12 +41,7 @@
       "quantidade": 16,
       "avaliacaoTotal": 17,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "8b15",
-          "nota": 4
-        }
-      ],
+      "avaliacoes": [],
       "id": "6b98"
     },
     {
@@ -76,12 +53,7 @@
       "quantidade": 18,
       "avaliacaoTotal": 15,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "f682"
     },
     {
@@ -93,12 +65,7 @@
       "quantidade": 10,
       "avaliacaoTotal": 8,
       "qtdAvaliacoes": 2,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "5297"
     },
     {
@@ -110,12 +77,7 @@
       "quantidade": 15,
       "avaliacaoTotal": 4,
       "qtdAvaliacoes": 1,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "64eb"
     },
     {
@@ -127,12 +89,7 @@
       "quantidade": 8,
       "avaliacaoTotal": 4,
       "qtdAvaliacoes": 1,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "26c2"
     },
     {
@@ -144,12 +101,7 @@
       "quantidade": 7,
       "avaliacaoTotal": 10,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "52d9"
     },
     {
@@ -161,12 +113,7 @@
       "quantidade": 10,
       "avaliacaoTotal": 19,
       "qtdAvaliacoes": 6,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "a8a6"
     },
     {
@@ -178,12 +125,7 @@
       "quantidade": 5,
       "avaliacaoTotal": 17,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "52ab"
     },
     {
@@ -195,12 +137,7 @@
       "quantidade": 3,
       "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "4199"
     },
     {
@@ -212,12 +149,7 @@
       "quantidade": 5,
       "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "e24b"
     },
     {
@@ -229,12 +161,7 @@
       "quantidade": 10,
       "avaliacaoTotal": 14,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "d872"
     },
     {
@@ -246,12 +173,7 @@
       "quantidade": 4,
       "avaliacaoTotal": 12,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "69b1"
     },
     {
@@ -263,12 +185,7 @@
       "quantidade": 6,
       "avaliacaoTotal": 7,
       "qtdAvaliacoes": 2,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "84e7"
     },
     {
@@ -280,12 +197,7 @@
       "quantidade": 3,
       "avaliacaoTotal": 4,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "b0cd"
     },
     {
@@ -297,12 +209,7 @@
       "quantidade": 8,
       "avaliacaoTotal": 17,
       "qtdAvaliacoes": 5,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "fc96"
     },
     {
@@ -314,12 +221,7 @@
       "quantidade": 6,
       "avaliacaoTotal": 10,
       "qtdAvaliacoes": 2,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "c1f9"
     },
     {
@@ -331,12 +233,7 @@
       "quantidade": 5,
       "avaliacaoTotal": 20,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "e61c"
     },
     {
@@ -348,12 +245,7 @@
       "quantidade": 10,
       "avaliacaoTotal": 13,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "58f0"
     },
     {
@@ -365,12 +257,7 @@
       "quantidade": 100,
       "avaliacaoTotal": 16,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "6de5"
     },
     {
@@ -382,12 +269,7 @@
       "quantidade": 90,
       "avaliacaoTotal": 12,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "90a0"
     },
     {
@@ -399,12 +281,7 @@
       "quantidade": 34,
       "avaliacaoTotal": 18,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "2820"
     },
     {
@@ -416,12 +293,7 @@
       "quantidade": 40,
       "avaliacaoTotal": 16,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "f2af"
     },
     {
@@ -433,12 +305,7 @@
       "quantidade": 30,
       "avaliacaoTotal": 8,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "86b5"
     },
     {
@@ -450,12 +317,7 @@
       "quantidade": 7,
       "avaliacaoTotal": 13,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "f1a3"
     },
     {
@@ -467,12 +329,7 @@
       "quantidade": 20,
       "avaliacaoTotal": 7,
       "qtdAvaliacoes": 5,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "7427"
     },
     {
@@ -484,12 +341,7 @@
       "quantidade": 5,
       "avaliacaoTotal": 8,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "34e5"
     },
     {
@@ -501,12 +353,7 @@
       "quantidade": 5,
       "avaliacaoTotal": 17,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "631b"
     },
     {
@@ -518,12 +365,7 @@
       "quantidade": 20,
       "avaliacaoTotal": 6,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "10b1"
     },
     {
@@ -535,12 +377,7 @@
       "quantidade": 25,
       "avaliacaoTotal": 5,
       "qtdAvaliacoes": 2,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "3ae5"
     },
     {
@@ -552,12 +389,7 @@
       "quantidade": 30,
       "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "1b7d"
     },
     {
@@ -569,12 +401,7 @@
       "quantidade": 45,
       "avaliacaoTotal": 18,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "b699"
     },
     {
@@ -586,12 +413,7 @@
       "quantidade": 22,
       "avaliacaoTotal": 16,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "2d8d"
     },
     {
@@ -603,12 +425,7 @@
       "quantidade": 60,
       "avaliacaoTotal": 17,
       "qtdAvaliacoes": 4,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "8076"
     },
     {
@@ -620,12 +437,7 @@
       "quantidade": 10,
       "avaliacaoTotal": 6,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "733f"
     },
     {
@@ -637,12 +449,7 @@
       "quantidade": 14,
       "avaliacaoTotal": 8,
       "qtdAvaliacoes": 3,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "2b14"
     },
     {
@@ -654,12 +461,7 @@
       "quantidade": 30,
       "avaliacaoTotal": 9,
       "qtdAvaliacoes": 2,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "23dd"
     },
     {
@@ -671,12 +473,7 @@
       "quantidade": 12,
       "avaliacaoTotal": 5,
       "qtdAvaliacoes": 2,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "5ca4"
     },
     {
@@ -688,12 +485,7 @@
       "quantidade": 10,
       "avaliacaoTotal": 18,
       "qtdAvaliacoes": 5,
-      "avaliacoes": [
-        {
-          "idUsuario": "",
-          "avaliacao": 0
-        }
-      ],
+      "avaliacoes": [],
       "id": "7597"
     }
   ],

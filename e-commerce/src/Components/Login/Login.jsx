@@ -10,6 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [usuarios, setUsuarios] = useState('');
   const [visible, setVisible] = useState(false);
+  const { rota } = useContext(GlobalContext);
 
   useEffect(() => {
     getUsuarios();
@@ -49,7 +50,11 @@ const Login = () => {
       if (usuarioEncontrado) {
         setUsuarioLogado(usuarioEncontrado);
         alert('Login realizado com sucesso');
-        history.push('/produtos');
+        if (rota != null) {
+          history.push(rota.pathname);
+        } else {
+          history.push('/produtos');
+        }
       } else {
         alert('Usuário não encontrado');
       }

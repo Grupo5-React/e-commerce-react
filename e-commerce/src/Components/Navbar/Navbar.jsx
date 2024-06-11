@@ -9,7 +9,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 const Navbar = ({ theme, setTheme }) => {
-  const { dados, setFilter } = useContext(GlobalContext);
+  const { dados, setFilter,usuarioLogado } = useContext(GlobalContext);
   const inputRef = useRef();
 
   function handleFilter() {
@@ -39,6 +39,7 @@ const Navbar = ({ theme, setTheme }) => {
           <Link to="/produtos/hds">HDS</Link>
           <Link to="/produtos/notebooks">Notebooks</Link>
           <Link to="/produtos/suprimentos">Suprimentos</Link>
+          {usuarioLogado&& <Link to='/pedido'>Meus Pedidos</Link>}
         </div>
         <div className="search-container">
           <div className="search-box">

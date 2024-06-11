@@ -5,7 +5,6 @@ import CardProduto from '../Components/CardProduto/CardProduto';
 import './ProdutoCategoria.css';
 import GlobalContext from '../hooks/GlobalContext ';
 
-
 const ProdutoCategoria = () => {
   const { carrinho, dados, filter, setCarrinho, setDados, setFilter } =
     useContext(GlobalContext);
@@ -51,27 +50,27 @@ const ProdutoCategoria = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container_pd_categoria">
       <h1>Produtos da categoria {categoria}</h1>
 
-<div className="flex">
-      {produtosPorCategoria.map((dado) => (
-        <CardProduto
-        key={dado.id}
-        id={dado.id}
-        img={dado.imgUrl}
-        nome={dado.nome}
-        descricao={dado.descricao}
-        preco={dado.preco}
-        categoria={dado.categoria}
-        quantidade={dado.quantidade}
-        avaliacaoTotal={dado.avaliacaoTotal}
-        qtdAvaliacoes={dado.qtdAvaliacoes}
-        loading={loading}
-        AdicionarCarrinho={handleAdicionarCarrinho}
-      />
-      ))}
-        </div>
+      <div className="flex">
+        {produtosPorCategoria.map((dado) => (
+          <CardProduto
+            key={dado.id}
+            id={dado.id}
+            img={dado.imgUrl}
+            nome={dado.nome}
+            descricao={dado.descricao}
+            preco={dado.preco}
+            categoria={dado.categoria}
+            quantidade={dado.quantidade}
+            avaliacaoTotal={dado.avaliacaoTotal}
+            qtdAvaliacoes={dado.qtdAvaliacoes}
+            loading={loading}
+            AdicionarCarrinho={handleAdicionarCarrinho}
+          />
+        ))}
+      </div>
     </div>
   );
 };

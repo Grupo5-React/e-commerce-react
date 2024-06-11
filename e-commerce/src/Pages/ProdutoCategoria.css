@@ -1,9 +1,12 @@
-.container{
+.container_pd_categoria{
   margin: 0 auto;
   border: 0;
   background-color: #242424;
 }
-
+.container_pd_categoria h1 {
+  padding: 1rem;
+  text-align: center;
+}
 
 .flex{
   display: flex;

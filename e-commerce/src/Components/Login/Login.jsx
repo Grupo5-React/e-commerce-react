@@ -1,5 +1,3 @@
-
-
 import { useContext, useEffect, useState } from 'react';
 import { FaUser, FaEye, FaEyeSlash } from 'react-icons/fa';
 import './Login.css';
@@ -7,21 +5,21 @@ import { api } from '../../api/api';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 import GlobalContext from '../../hooks/GlobalContext ';
 
-
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [usuarios, setUsuarios] = useState('');
   const [visible, setVisible] = useState(false);
+  const { rota } = useContext(GlobalContext);
 
-  useEffect(()=>{
-    getUsuarios(); 
-  },[])
+  useEffect(() => {
+    getUsuarios();
+  }, []);
 
   const { usuarioLogado, setUsuarioLogado } = useContext(GlobalContext);
 
   const history = useHistory();
- 
+
   const getUsuarios = async () => {
     const response = await api.get('/users');
     setUsuarios(response.data);
@@ -39,7 +37,7 @@ const Login = () => {
     ) {
       alert('Usuário ou senha incorretos!!');
       return;
-    }else{
+    } else {
       setUsuarioLogado(null);
 
       let usuarioEncontrado = null;
@@ -48,20 +46,28 @@ const Login = () => {
           usuarioEncontrado = user;
         }
       });
-      
+
       if (usuarioEncontrado) {
         setUsuarioLogado(usuarioEncontrado);
         alert('Login realizado com sucesso');
+        if (rota != null) {
+          history.push(rota.pathname);
+        } else {
+          history.push('/produtos');
+        }
       } else {
         alert('Usuário não encontrado');
       }
-     history.push('/produtos')
+      if (usuarioLogado) {
+        alert(usuarioLogado.id);
+      }
+      // history.push('/produtos')
     }
   };
+  //ok
 
   return (
-
-    <section className="Login"> 
+    <section className="Login">
       <div className="container">
         <form onSubmit={handleSubmit}>
           <h1>Acesse o sistema</h1>
@@ -77,33 +83,34 @@ const Login = () => {
           </div>
           <div className="input-field">
             <input
-              type={visible? "text" : "password"}
+              type={visible ? 'text' : 'password'}
               placeholder="Senha"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-
             />
             <span
               className="button-show-password OlhoSenha"
-              onClick={()=>{setVisible(!visible)}}
+              onClick={() => {
+                setVisible(!visible);
+              }}
             >
-            {visible? <FaEye /> : <FaEyeSlash />}
+              {visible ? <FaEye /> : <FaEyeSlash />}
             </span>
           </div>
 
-          <div className="recall-forget">
-          </div>
-          <button type="submit" onClick={handleVerificacao}>Login</button>
+          <div className="recall-forget"></div>
+          <button type="submit" onClick={handleVerificacao}>
+            Login
+          </button>
           <div className="signup-link">
             <p>
-              Não tem uma conta? <a href="/CadastroUsuario">Registre-se</a>{" "}
+              Não tem uma conta? <a href="/CadastroUsuario">Registre-se</a>{' '}
             </p>
           </div>
         </form>
       </div>
-    </section>   
-
+    </section>
   );
 };
 

@@ -14,47 +14,34 @@ const Navbar = ({ theme, setTheme }) => {
 
   function handleFilter() {
     let valorInput = inputRef.current.value.toLowerCase().normalize();
-    if (valorInput === '') {
-      setFilter(dados);
-    } else {
-      const filtrados = dados.filter(
-        (produto) =>
-          produto.nome.toLowerCase().normalize().startsWith(valorInput),
-        //.includes(),
-      );
-      setFilter(filtrados);
-    }
-  }
-
-  function handleChange() {
-    handleFilter();
-    console.log(inputRef);
+    const filtrados = dados.filter((produto) =>
+      produto.nome.toLowerCase().normalize().startsWith(valorInput),
+    );
+    setFilter(filtrados);
   }
 
   return (
     <header className="header">
       <nav className="navbar">
         <div className="navbar_links">
-          <Link to="/produtos">Produtos</Link>
+          <Link to="/produtos" onClick={handleFilter}>
+            Produtos
+          </Link>
           <Link to="/produtos/hds">HDS</Link>
           <Link to="/produtos/notebooks">Notebooks</Link>
           <Link to="/produtos/suprimentos">Suprimentos</Link>
         </div>
         <div className="search-container">
           <div className="search-box">
-            <input
-              type="text"
-              placeholder="Buscar"
-              ref={inputRef}
-              onChange={handleChange}
-            />
+            <input type="text" placeholder="Buscar" ref={inputRef} />
             <img
               src={theme == 'light' ? search_icon_light : search_icon_dark}
               alt="Logo"
+              onClick={handleFilter}
             />
           </div>
 
-          <Link to="/login">
+          <Link to="/cadastrousuario">
             <PersonAddIcon />
           </Link>
           <Link to="/login">

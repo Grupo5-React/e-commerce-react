@@ -107,13 +107,14 @@ const Carrinho = () => {
           );
         }
       });
+      setCarrinho([]);
       history.push('/pedido');
     }
   }
 
   console.log('essa é quantidadeasdasd ', pedido);
   return (
-    <div className="container">
+    <div className="container_carrinho">
       <div className="item">
         {carrinho.map((produto, id) => (
           <div key={produto.id} className="flex_carrinho">
@@ -137,9 +138,15 @@ const Carrinho = () => {
             </Tooltip>
           </div>
         ))}
+        <div className="carrinho_btn">
+          <button className="btn" onClick={handleLimparCarrinho}>
+            Limpar Carrinho
+          </button>
+          <button className="btn" onClick={handleFinalizarCompra}>
+            Finalizar Compra
+          </button>
+        </div>
       </div>
-      <button onClick={handleLimparCarrinho}>Limpar Carrinho</button>
-      <button onClick={handleFinalizarCompra}>Finalizar Compra</button>
     </div>
   );
 };

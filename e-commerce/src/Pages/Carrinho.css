@@ -5,6 +5,7 @@
   width: 100%;
   box-sizing: border-box;
   font-size: 16px;
+  min-height: 430px;
   margin-top: 32px !important;
   gap: 32px;
 }

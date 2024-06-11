@@ -38,7 +38,7 @@ const ProdutoEspecifico = () => {
       setProduto(response.data);
       setRatingValue(response.data.avaliacaoTotal / response.data.qtdAvaliacoes);
     } catch (error) {
-      console.error("Failed to fetch product", error);
+      console.error("Erro ao buscar produto", error);
     }
   };
 
@@ -66,7 +66,7 @@ const ProdutoEspecifico = () => {
       setRatingValue(response.data.avaliacaoTotal / response.data.qtdAvaliacoes);
       setUserRating(newRating);
     } catch (error) {
-      console.error("Failed to update rating", error);
+      console.error("Erro ao atualizar avaliação", error);
     }
   };
 

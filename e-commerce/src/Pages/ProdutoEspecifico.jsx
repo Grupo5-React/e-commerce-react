@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { api } from "../api/api"
-import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 import GlobalContext from "../hooks/GlobalContext ";
 
 const ProdutoEspecifico = () => {

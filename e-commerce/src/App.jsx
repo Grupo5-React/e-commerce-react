@@ -23,6 +23,7 @@ function App() {
             path="/produtos/:categoria"
             component={ProdutoCategoria}
           />
+          <Route path="/" component={Produto} />
           <Route path="/produtos" component={Produto} />
           <Route exact path="/produto/:id" component={ProdutoEspecifico} />
           <Route exact path="/pedido" component={Pedidos} />

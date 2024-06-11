@@ -6,7 +6,8 @@ import "./Pedido.css"
 const Pedidos = () => {
   const { usuarioLogado, carrinho } = useContext(GlobalContext);
   const [pedidos, setPedidos] = useState([]);
-
+  
+  
   useEffect(() => {
     getPedido();
   }, []);
@@ -24,6 +25,7 @@ const Pedidos = () => {
       console.error('Erro ao buscar pedidos:', error);
     }
   }
+  
 
   return (
     <div className='Pedido'>

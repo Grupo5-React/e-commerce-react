@@ -1,0 +1,13 @@
+.container{
+  margin: 0 auto;
+  border: 0;
+  background-color: #242424;
+}
+
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 5rem;
+}

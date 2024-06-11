@@ -6,11 +6,13 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import './Carrinho.css';
+import { useLocation } from 'react-router-dom';
 
 const Carrinho = () => {
-  const { carrinho, pedido, setCarrinho, setPedido, usuarioLogado } =
+  const { carrinho, pedido, setCarrinho, setPedido, usuarioLogado, SetRota } =
     useContext(GlobalContext);
   const history = useHistory();
+  const location = useLocation();
 
   const [subTotal, setSubTotal] = useState(
     carrinho.map((produto) => produto.preco),
@@ -61,49 +63,58 @@ const Carrinho = () => {
   }
 
   async function handleFinalizarCompra() {
-    const itensPedido = [];
-    const alterarQuantidade = [];
-    let total = 0;
-    carrinho.forEach((item) => {
-      const subTotal = item.preco * item.produtoQuantidades;
-      total += subTotal;
-      itensPedido.push({
-        idProduto: item.id,
-        quantidade: item.produtoQuantidades,
-      });
-      alterarQuantidade.push({
-        idProduto: item.id,
-        quantidade: item.quantidade - item.produtoQuantidades,
-      });
-    });
-    setPedido([...pedido, { ...itensPedido, total }]);
-
-     await api.post('/pedido/', {
-      valorTotal: total,
-      idUser: usuarioLogado.id,
-      itens: itensPedido,
-    });
-
-    alterarQuantidade.forEach(async (item) => {
-      try {
-        const response = await api.patch(`/produto/${item.idProduto}`, {
-          quantidade: item.quantidade,
+    if (usuarioLogado === null) {
+      SetRota(location);
+      console.log(location);
+      history.push('/login');
+    } else {
+      const itensPedido = [];
+      const alterarQuantidade = [];
+      let total = 0;
+      carrinho.forEach((item) => {
+        const subTotal = item.preco * item.produtoQuantidades;
+        total += subTotal;
+        itensPedido.push({
+          idProduto: item.id,
+          quantidade: item.produtoQuantidades,
         });
-        console.log(
-          `Produto ${item.idProduto} atualizado com sucesso`,
-          response.data,
-        );
-      } catch (error) {
-        console.error(`Erro ao atualizar o produto ${item.idProduto}:`, error);
-      }
-    });
+        alterarQuantidade.push({
+          idProduto: item.id,
+          quantidade: item.quantidade - item.produtoQuantidades,
+        });
+      });
+      setPedido([...pedido, { ...itensPedido, total }]);
 
-    history.push('/pedido');
+      await api.post('/pedido/', {
+        valorTotal: total,
+        idUser: usuarioLogado.id,
+        itens: itensPedido,
+      });
+
+      alterarQuantidade.forEach(async (item) => {
+        try {
+          const response = await api.patch(`/produto/${item.idProduto}`, {
+            quantidade: item.quantidade,
+          });
+          console.log(
+            `Produto ${item.idProduto} atualizado com sucesso`,
+            response.data,
+          );
+        } catch (error) {
+          console.error(
+            `Erro ao atualizar o produto ${item.idProduto}:`,
+            error,
+          );
+        }
+      });
+      setCarrinho([]);
+      history.push('/pedido');
+    }
   }
 
   console.log('essa é quantidadeasdasd ', pedido);
   return (
-    <div className="container">
+    <div className="container_carrinho">
       <div className="item">
         {carrinho.map((produto, id) => (
           <div key={produto.id} className="flex_carrinho">
@@ -127,9 +138,15 @@ const Carrinho = () => {
             </Tooltip>
           </div>
         ))}
+        <div className="carrinho_btn">
+          <button className="btn" onClick={handleLimparCarrinho}>
+            Limpar Carrinho
+          </button>
+          <button className="btn" onClick={handleFinalizarCompra}>
+            Finalizar Compra
+          </button>
+        </div>
       </div>
-      <button onClick={handleLimparCarrinho}>Limpar Carrinho</button>
-      <button onClick={handleFinalizarCompra}>Finalizar Compra</button>
     </div>
   );
 };

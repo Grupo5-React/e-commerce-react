@@ -2,7 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { api } from '../api/api';
 import CardProduto from '../Components/CardProduto/CardProduto';
+import './ProdutoCategoria.css';
 import GlobalContext from '../hooks/GlobalContext ';
+
 
 const ProdutoCategoria = () => {
   const { carrinho, dados, filter, setCarrinho, setDados, setFilter } =
@@ -49,9 +51,10 @@ const ProdutoCategoria = () => {
   }
 
   return (
-    <div>
+    <div className="container">
       <h1>Produtos da categoria {categoria}</h1>
 
+<div className="flex">
       {produtosPorCategoria.map((dado) => (
         <CardProduto
         key={dado.id}
@@ -68,6 +71,7 @@ const ProdutoCategoria = () => {
         AdicionarCarrinho={handleAdicionarCarrinho}
       />
       ))}
+        </div>
     </div>
   );
 };

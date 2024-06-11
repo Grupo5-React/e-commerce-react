@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 export const GlobalContext = React.createContext();
 
@@ -8,6 +9,7 @@ export const GlobalStorage = ({ children }) => {
   const [dados, setDados] = useState([]);
   const [filter, setFilter] = useState([]);
   const [usuarioLogado, setUsuarioLogado] = useState(null);
+  const [rota, SetRota] = useState();
 
   return (
     <GlobalContext.Provider
@@ -22,6 +24,8 @@ export const GlobalStorage = ({ children }) => {
         setFilter,
         usuarioLogado,
         setUsuarioLogado,
+        rota,
+        SetRota,
       }}
     >
       {children}

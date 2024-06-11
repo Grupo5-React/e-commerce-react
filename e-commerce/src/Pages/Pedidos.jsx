@@ -1,17 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { api } from '../api/api';
 import GlobalContext from '../hooks/GlobalContext ';
-import "./Pedido.css"
+import './Pedido.css';
 
 const Pedidos = () => {
-  const { usuarioLogado, carrinho } = useContext(GlobalContext);
+  const { usuarioLogado, dados } = useContext(GlobalContext);
   const [pedidos, setPedidos] = useState([]);
-  const [produtos, setProdutos] = useState([]);
-  
-  
+  //const [produtos, setProdutos] = useState([]);
+
   useEffect(() => {
     getPedido();
-    getProduto();
+    //getProduto();
   }, []);
 
   async function getPedido() {
@@ -27,19 +26,21 @@ const Pedidos = () => {
       console.error('Erro ao buscar pedidos:', error);
     }
   }
-  
-  const getProduto = async ()=>{
+  /*
+  const getProduto = async () => {
     const response = await api.get('/produto');
     setProdutos(response.data);
-  }
-
+  };
+*/
   return (
-    <div className='Pedido'>
+    <div className="Pedido">
       {pedidos.map((pedido) => (
         <div key={pedido.id}>
           <p>Número do pedido: {pedido.id} </p>
           {pedido.itens.map((item) => {
-            const produto = produtos.find((produto) => produto.id === item.idProduto);
+            const produto = dados.find(
+              (produto) => produto.id === item.idProduto,
+            );
             if (produto) {
               return (
                 <div key={item.id}>

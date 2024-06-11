@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { api } from '../api/api';
 import CardProduto from '../Components/CardProduto/CardProduto';
+import GlobalContext from '../hooks/GlobalContext ';
 
 const ProdutoCategoria = () => {
+  const { carrinho, dados, filter, setCarrinho, setDados, setFilter } =
+    useContext(GlobalContext);
+  const [loading, setLoading] = useState(false);
   const { categoria } = useParams();
-  const [dados, setDados] = useState([]);
+  // const [dados, setDados] = useState([]);
 
   useEffect(() => {
     getAll();
@@ -22,20 +26,47 @@ const ProdutoCategoria = () => {
     (produto) => produto.categoria.toLowerCase() === categoria,
   );
 
+  function handleAdicionarCarrinho(id) {
+    const produtoSelecionado = dados.find((produto) => produto.id === id);
+    const produtoJaNoCarrinho = carrinho.some(
+      (produto) => produto.id === produtoSelecionado.id,
+    );
+    setLoading(true);
+    setTimeout(() => {
+      if (!produtoJaNoCarrinho) {
+        setCarrinho([
+          ...carrinho,
+          {
+            ...produtoSelecionado,
+            produtoQuantidades: 1,
+          },
+        ]);
+      } else {
+        alert('Produto já adicionado ao carrinho');
+      }
+      setLoading(false);
+    }, 800);
+  }
+
   return (
     <div>
       <h1>Produtos da categoria {categoria}</h1>
 
       {produtosPorCategoria.map((dado) => (
         <CardProduto
-          key={dado.id}
-          img={dado.imgUrl}
-          nome={dado.nome}
-          descricao={dado.descricao}
-          preco={dado.preco}
-          categoria={dado.categoria}
-          quantidade={dado.quantidade}
-        />
+        key={dado.id}
+        id={dado.id}
+        img={dado.imgUrl}
+        nome={dado.nome}
+        descricao={dado.descricao}
+        preco={dado.preco}
+        categoria={dado.categoria}
+        quantidade={dado.quantidade}
+        avaliacaoTotal={dado.avaliacaoTotal}
+        qtdAvaliacoes={dado.qtdAvaliacoes}
+        loading={loading}
+        AdicionarCarrinho={handleAdicionarCarrinho}
+      />
       ))}
     </div>
   );

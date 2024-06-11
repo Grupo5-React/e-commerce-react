@@ -36,7 +36,7 @@ const Pedidos = () => {
               <p>Quantidade: {item.produtoQuantidades}</p>
             </div>
           ))}
-          <p>Total:${pedido.valorTotal} </p>
+          <p>Total: R$ {pedido.valorTotal.toFixed(2)}</p>
         </div>
       ))}
     </div>

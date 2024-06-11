@@ -1,0 +1,75 @@
+/* Estilos gerais para a página do produto */
+.product-page {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Estilos para a imagem do produto */
+.product-image {
+  flex: 0 0 auto; /* Isso mantém a imagem do produto do mesmo tamanho */
+  width: 500px;
+  height: auto;
+  margin-right: 20px; /* Espaço entre a imagem e o conteúdo */
+  border-radius: 8px;
+}
+
+/* Estilos para o conteúdo do produto */
+.product-content {
+  flex: 1; /* Isso permite que o conteúdo ocupe o restante do espaço disponível */
+}
+
+/* Estilos para o título e descrição do produto */
+.product-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para o preço do produto */
+.product-price {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para a avaliação dos usuários */
+.user-rating {
+  margin-bottom: 20px;
+}
+
+.user-rating-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.user-rating-stars {
+  margin-bottom: 10px;
+}
+
+.user-rating-value {
+  font-size: 16px;
+}
+
+.user-rating-reviews {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Estilos para o botão de adicionar ao carrinho */
+.add-to-cart-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3;
+}

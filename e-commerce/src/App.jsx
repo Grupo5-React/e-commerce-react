@@ -16,7 +16,6 @@ function App() {
   const { usuarioLogado } = useContext(GlobalContext);
   return (
     <>
-      {/*  <Cabecalho/>*/}
       <BrowserRouter>
         {/* <Cabecalho /> */}
         <Navbar />
@@ -31,17 +30,12 @@ function App() {
           <Route path="/produtos" component={Produto} />
           <Route exact path="/produto/:id" component={ProdutoEspecifico} />
           <Route exact path="/pedido" component={Pedidos} />
-           {/* usuarioLogado ? (
-            <Route exact path="/pedido" component={Pedidos} />
+          {/* usuarioLogado ? (
+          <Route exact path="/pedido" component={Pedidos} />
           ) : (
-            <Redirect to="/login" />
-           ) */}
+          <Redirect to="/login" />
+          )*/}
           <Route exact path="/carrinho" component={Carrinho} />
-          usuarioLogado ? (
-            <Route exact path="/carrinho" component={Carrinho} />
-          ) : (
-            <Redirect to="/" />
-          )*
         </Switch>
       </BrowserRouter>
     </>

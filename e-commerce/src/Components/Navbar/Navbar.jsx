@@ -2,7 +2,6 @@ import React, { useContext, useRef } from 'react';
 import './Navbar.css';
 import search_icon_light from '../../assets/search-w.png';
 import search_icon_dark from '../../assets/search-b.png';
-import { Toolbar, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import GlobalContext from '../../hooks/GlobalContext ';
 import Login from '@mui/icons-material/Login';
@@ -18,8 +17,10 @@ const Navbar = ({ theme, setTheme }) => {
     if (valorInput === '') {
       setFilter(dados);
     } else {
-      const filtrados = dados.filter((produto) =>
-        produto.nome.toLowerCase().normalize().startsWith(valorInput),
+      const filtrados = dados.filter(
+        (produto) =>
+          produto.nome.toLowerCase().normalize().startsWith(valorInput),
+        //.includes(),
       );
       setFilter(filtrados);
     }
@@ -31,28 +32,19 @@ const Navbar = ({ theme, setTheme }) => {
   }
 
   return (
-    <div className="navbar">
-      <img src="../../assets/logo_navbar.png" alt="" className="logo" />
-
-      <Toolbar>
-        <Typography variant="h6" component="div"></Typography>
-        <nav className="navbar">
-          <Link to="/produtos">
-            <button>Produtos</button>
-          </Link>
-          <Link to="/produtos/hds">
-            <button>HDS</button>
-          </Link>
-          <Link to="/produtos/notebooks">
-            <button>Notebooks</button>
-          </Link>
-          <Link to="/produtos/suprimentos">
-            <button>Suprimentos</button>
-          </Link>
+    <header className="header">
+      <nav className="navbar">
+        <div className="navbar_links">
+          <Link to="/produtos">Produtos</Link>
+          <Link to="/produtos/hds">HDS</Link>
+          <Link to="/produtos/notebooks">Notebooks</Link>
+          <Link to="/produtos/suprimentos">Suprimentos</Link>
+        </div>
+        <div className="search-container">
           <div className="search-box">
             <input
               type="text"
-              placeholder="Search"
+              placeholder="Buscar"
               ref={inputRef}
               onChange={handleChange}
             />
@@ -61,25 +53,20 @@ const Navbar = ({ theme, setTheme }) => {
               alt="Logo"
             />
           </div>
+
           <Link to="/login">
-            <button>
-              <PersonAddIcon />
-            </button>
+            <PersonAddIcon />
           </Link>
           <Link to="/login">
-            <button>
-              <Login />
-            </button>
+            <Login />
           </Link>
 
           <Link to="/carrinho">
-            <button>
-              <ShoppingCartIcon />
-            </button>
+            <ShoppingCartIcon />
           </Link>
-        </nav>
-      </Toolbar>
-    </div>
+        </div>
+      </nav>
+    </header>
   );
 };
 

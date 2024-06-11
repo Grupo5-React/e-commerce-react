@@ -32,11 +32,10 @@ const Navbar = ({ theme, setTheme }) => {
 
   return (
     <div className="navbar">
-      <img src="../../assets/logo_navbar.png" alt="" className="logo" />
-
-      <Toolbar>
-        <Typography variant="h6" component="div"></Typography>
+      <img src='../../assets/logo_navbar.png' alt="" className="logo" />
+   
         <nav className="navbar">
+                  
           <Link to="/produtos">
             <button>Produtos</button>
           </Link>
@@ -49,6 +48,25 @@ const Navbar = ({ theme, setTheme }) => {
           <Link to="/produtos/suprimentos">
             <button>Suprimentos</button>
           </Link>
+
+          <Link to="/login">
+            <button>
+          <Login />
+            </button>
+          </Link>       
+
+          <Link to="./CadastroUsuario/CadastroUsuario">
+            <button>
+              <PersonAddIcon />
+            </button>
+          </Link>
+
+          <Link to="/carrinho">
+            <button>
+              <ShoppingCartIcon />
+            </button>
+          </Link>
+
           <div className="search-box">
             <input
               type="text"
@@ -61,24 +79,9 @@ const Navbar = ({ theme, setTheme }) => {
               alt="Logo"
             />
           </div>
-          <Link to="/login">
-            <button>
-              <PersonAddIcon />
-            </button>
-          </Link>
-          <Link to="/login">
-            <button>
-              <Login />
-            </button>
-          </Link>
-
-          <Link to="/carrinho">
-            <button>
-              <ShoppingCartIcon />
-            </button>
-          </Link>
+          
         </nav>
-      </Toolbar>
+     
     </div>
   );
 };

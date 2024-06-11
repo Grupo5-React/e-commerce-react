@@ -6,8 +6,6 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { FaLock, FaMailBulk, FaUser } from "react-icons/fa";
 
 
-
-
 const CadastroUsuario = () => {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');

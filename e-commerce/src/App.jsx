@@ -11,6 +11,7 @@ import { Redirect } from 'react-router-dom/cjs/react-router-dom.min.js';
 import { useContext } from 'react';
 import Pedidos from './Pages/Pedidos.jsx';
 import Navbar from './Components/Navbar/Navbar.jsx';
+import Footer from './Components/Footer/Footer.jsx';
 
 function App() {
   const { usuarioLogado } = useContext(GlobalContext);
@@ -20,15 +21,7 @@ function App() {
       <BrowserRouter>
         {/* <Cabecalho /> */}
         <Navbar />
-        <nav className="nav">
-          <Link to="/login">Login</Link>
-          <Link to="/cadastroUsuario">Cadastro</Link>
-          <Link to="/produtos">Produtos</Link>
-          <Link to="/produtos/hds">HDs</Link>
-          <Link to="/produtos/notebooks">Notebooks</Link>
-          <Link to="/produtos/suprimentos">Suprimentos</Link>
-          <Link to="/carrinho">carrinho</Link>
-        </nav>
+       
         <Switch>
           <Route exact path="/login" component={Login} />
           <Route path="/cadastroUsuario" component={CadastroUsuario} />
@@ -47,12 +40,13 @@ function App() {
            )
           <Route exact path="/carrinho" component={Carrinho} />
           usuarioLogado ? (
-            <Route exact path="/carrinho" component={Carrinho} />
+          <Route exact path="/carrinho" component={Carrinho} />
           ) : (
             <Redirect to="/" />
           )*
         </Switch>
       </BrowserRouter>
+      <Footer/>
     </>
   );
 }

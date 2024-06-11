@@ -72,63 +72,71 @@ const ProdutoEspecifico = () => {
   }
 
   return (
-    <div className="product-page">
-      <img className="product-image" src={produto.imgUrl} alt={produto.nome} />
-      <div className="product-content">
-        <h1 className="product-title">{produto.nome}</h1>
-        <h3 className="product-description">{produto.descricao}</h3>
-        <p className="product-price">R$ {produto.preco}</p>
-        <Box
-          sx={{
-            '& > legend': { mt: 2 },
-          }}
-          className="user-rating"
-        >
-          <Typography component="legend" className="user-rating-title">
-            Avaliação dos usuários
-          </Typography>
-          <Rating name="read-only" value={ratingValue} readOnly />
-          <p className="user-rating-value">{ratingValue.toFixed(1)} estrelas</p>
-          <p className="user-rating-reviews">
-            {produto.qtdAvaliacoes} avaliações
-          </p>
-          {usuarioLogado ? (
-            !isRated ? (
-              <>
-                <Typography component="legend">
-                  Sua avaliação sobre este produto
-                </Typography>
-                <Rating
-                  name="simple-controlled"
-                  value={ratingValue}
-                  onChange={(event, newRating) => {
-                    updateRating(newRating);
-                    setUserRating(newRating);
-                    setIsRated(true);
-                  }}
-                  className="user-rating-stars"
-                />
-              </>
-            ) : (
-              <>
-                <Typography component="legend">
-                  Obrigado por avaliar este produto!
-                </Typography>
-                <Rating name="disabled" value={userRating} disabled />
-              </>
-            )
-          ) : (
-            <Typography component="legend">
-              Faça login para avaliar este produto!
+    <div className="product_container">
+      <div className="product-page">
+        <img
+          className="product-image"
+          src={produto.imgUrl}
+          alt={produto.nome}
+        />
+        <div className="product-content">
+          <h1 className="product-title">{produto.nome}</h1>
+          <h3 className="product-description">{produto.descricao}</h3>
+          <p className="product-price">R$ {produto.preco}</p>
+          <Box
+            sx={{
+              '& > legend': { mt: 2 },
+            }}
+            className="user-rating"
+          >
+            <Typography component="legend" className="user-rating-title">
+              Avaliação dos usuários
             </Typography>
-          )}
-        </Box>
-        <button
-          className="add-to-cart-button"
-          onClick={() => handleAdicionarCarrinho(produto.id)}
-        >
-          Adicionar ao Carrinho
-        </button>
+            <Rating name="read-only" value={ratingValue} readOnly />
+            <p className="user-rating-value">
+              {ratingValue.toFixed(1)} estrelas
+            </p>
+            <p className="user-rating-reviews">
+              {produto.qtdAvaliacoes} avaliações
+            </p>
+            {usuarioLogado ? (
+              !isRated ? (
+                <>
+                  <Typography component="legend">
+                    Sua avaliação sobre este produto
+                  </Typography>
+                  <Rating
+                    name="simple-controlled"
+                    value={ratingValue}
+                    onChange={(event, newRating) => {
+                      updateRating(newRating);
+                      setUserRating(newRating);
+                      setIsRated(true);
+                    }}
+                    className="user-rating-stars"
+                  />
+                </>
+              ) : (
+                <>
+                  <Typography component="legend">
+                    Obrigado por avaliar este produto!
+                  </Typography>
+                  <Rating name="disabled" value={userRating} disabled />
+                </>
+              )
+            ) : (
+              <Typography component="legend">
+                Faça login para avaliar este produto!
+              </Typography>
+            )}
+          </Box>
+          <button
+            className="add-to-cart-button"
+            onClick={() => handleAdicionarCarrinho(produto.id)}
+          >
+            Adicionar ao Carrinho
+          </button>
+        </div>
       </div>
     </div>
   );

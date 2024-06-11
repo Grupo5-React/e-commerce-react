@@ -52,7 +52,7 @@ const Pedidos = () => {
               return null;
             }
           })}
-          <p>Total:${pedido.valorTotal} </p>
+          <p>Total: R$ {pedido.valorTotal.toFixed(2)}</p>
           <hr />
         </div>
       ))}

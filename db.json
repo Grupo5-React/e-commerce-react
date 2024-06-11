@@ -5,6 +5,12 @@
       "nome": "Antonio",
       "email": "antonio@email.com",
       "senha": "123456"
+    },
+    {
+      "id": "b307",
+      "nome": "Danilo Siqueira",
+      "email": "danilus_rs@outlook.com",
+      "senha": "123456789"
     }
   ],
   "produto": [
@@ -15,9 +21,20 @@
       "preco": 5585.9,
       "categoria": "Notebooks",
       "quantidade": 7,
-      "avaliacaoTotal": 108,
-      "qtdAvaliacoes": 24,
-      "avaliacoes": [],
+      "avaliacaoTotal": 117,
+      "qtdAvaliacoes": 26,
+      "avaliacoes": [
+        {
+          "idUsuario": "8b15",
+          "nota": 5,
+          "comentario": "Não testei mas chegou no prazo"
+        },
+        {
+          "idUsuario": "b307",
+          "nota": 4,
+          "comentario": "Muito bom, mas chegou com atraso."
+        }
+      ],
       "id": "e71f"
     },
     {

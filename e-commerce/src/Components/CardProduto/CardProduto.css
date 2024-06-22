@@ -5,15 +5,13 @@
   gap: 30px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 10px;
-  margin: 10px;
-  width: 400px;
+  padding: 1em;
+  margin: 2em;
+  width: 18em;
   min-height: 500px;
   box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(255,255, 255, 0.9);
   background-color: #474747;
-  
-
 }
 
 .card_links{

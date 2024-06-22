@@ -11,6 +11,18 @@
       "nome": "Danilo Siqueira",
       "email": "danilus_rs@outlook.com",
       "senha": "123456789"
+    },
+    {
+      "id": "c821",
+      "nome": "Raphael da Rocha",
+      "email": "raphael@gmail.com",
+      "senha": "123"
+    },
+    {
+      "id": "87c5",
+      "nome": "",
+      "email": "",
+      "senha": ""
     }
   ],
   "produto": [
@@ -20,9 +32,9 @@
       "descricao": "360 Windows 11 Home Intel Core i7-1360P 16GB 512 GB SSD 15.6 Full HD AMOLED 1.46 kg",
       "preco": 5585.9,
       "categoria": "Notebooks",
-      "quantidade": 5,
-      "avaliacaoTotal": 117,
-      "qtdAvaliacoes": 26,
+      "quantidade": 0,
+      "avaliacaoTotal": 121,
+      "qtdAvaliacoes": 27,
       "avaliacoes": [
         {
           "idUsuario": "8b15",
@@ -33,6 +45,11 @@
           "idUsuario": "b307",
           "nota": 4,
           "comentario": "Muito bom, mas chegou com atraso."
+        },
+        {
+          "idUsuario": "c821",
+          "nota": 4,
+          "comentario": "Sou exigente, mas tá bom"
         }
       ],
       "id": "e71f"
@@ -43,7 +60,7 @@
       "descricao": "NVIDIA RTX3050, Intel Core I5, 8GB, 512GB, KeepOS, Tela de 15,6, Cinza - FX507ZC4-HN100",
       "preco": 5585,
       "categoria": "Notebooks",
-      "quantidade": 6,
+      "quantidade": 0,
       "avaliacaoTotal": 59,
       "qtdAvaliacoes": 14,
       "avaliacoes": [],
@@ -55,7 +72,7 @@
       "descricao": "Ryzen 7 4600h 16gb 256gb Ssd Linux Keep Os 15,6 Led Prata",
       "preco": 5699,
       "categoria": "Notebooks",
-      "quantidade": 16,
+      "quantidade": 0,
       "avaliacaoTotal": 17,
       "qtdAvaliacoes": 4,
       "avaliacoes": [],
@@ -67,7 +84,7 @@
       "descricao": "A315-510P-35D2 Intel Core i3, 8GB RAM, 512GB SSD, 15.6 LED FULL HD, Windows 11",
       "preco": 2299,
       "categoria": "Notebooks",
-      "quantidade": 18,
+      "quantidade": 17,
       "avaliacaoTotal": 15,
       "qtdAvaliacoes": 3,
       "avaliacoes": [],
@@ -79,7 +96,7 @@
       "descricao": "Windows 11 Home, 8GB, 256GB SSD, Intel Iris Xe, 15.6 Full HD LED, 1.81kg",
       "preco": 2919,
       "categoria": "Notebooks",
-      "quantidade": 10,
+      "quantidade": 9,
       "avaliacaoTotal": 8,
       "qtdAvaliacoes": 2,
       "avaliacoes": [],
@@ -115,7 +132,7 @@
       "descricao": "11 gen 8GB RAM 256GB SSD, Tela 15.6 Polegadas Full HD Antirreflexo, Windows 11 Home, Cinza Grafite - VJFE55F11X-B0111H",
       "preco": 2247.9,
       "categoria": "Notebooks",
-      "quantidade": 7,
+      "quantidade": 5,
       "avaliacaoTotal": 10,
       "qtdAvaliacoes": 3,
       "avaliacoes": [],
@@ -127,7 +144,7 @@
       "descricao": "Lumina Bar Celeron, 4GB 128GB eMMC, Tela 15 polegadas HD Antirreflexo, Windows 11, Tecla Link - Cinza -2 ANOS DE GARANTIA",
       "preco": 1247.85,
       "categoria": "Notebooks",
-      "quantidade": 10,
+      "quantidade": 8,
       "avaliacaoTotal": 19,
       "qtdAvaliacoes": 6,
       "avaliacoes": [],
@@ -355,7 +372,7 @@
       "descricao": "17 polegadas Luva Preto",
       "preco": 52.99,
       "categoria": "Suprimentos",
-      "quantidade": 5,
+      "quantidade": 4,
       "avaliacaoTotal": 8,
       "qtdAvaliacoes": 4,
       "avaliacoes": [],
@@ -391,7 +408,7 @@
       "descricao": "ST4000DM004, Seagate, HD interno, Prata",
       "preco": 598,
       "categoria": "HDs",
-      "quantidade": 25,
+      "quantidade": 24,
       "avaliacaoTotal": 5,
       "qtdAvaliacoes": 2,
       "avaliacoes": [],
@@ -606,6 +623,108 @@
           "idProduto": "e71f",
           "quantidade": 2
         },
+        {
+          "idProduto": "6dfa",
+          "quantidade": 3
+        }
+      ]
+    },
+    {
+      "id": "7561",
+      "valorTotal": 11170.9,
+      "idUser": "c821",
+      "itens": [
+        {
+          "idProduto": "e71f",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "6dfa",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "fe7a",
+      "valorTotal": 3495.75,
+      "idUser": "c821",
+      "itens": [
+        {
+          "idProduto": "52d9",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "a8a6",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "c2c9",
+      "valorTotal": 37293.340000000004,
+      "idUser": "87c5",
+      "itens": [
+        {
+          "idProduto": "e71f",
+          "quantidade": 4
+        },
+        {
+          "idProduto": "a8a6",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "f682",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "34e5",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "3ae5",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "6dfa",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "5297",
+          "quantidade": 1
+        },
+        {
+          "idProduto": "52d9",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "e7fe",
+      "valorTotal": 5585,
+      "idUser": "87c5",
+      "itens": [
+        {
+          "idProduto": "6dfa",
+          "quantidade": 1
+        }
+      ]
+    },
+    {
+      "id": "1526",
+      "valorTotal": 91184,
+      "idUser": "87c5",
+      "itens": [
+        {
+          "idProduto": "6b98",
+          "quantidade": 16
+        }
+      ]
+    },
+    {
+      "id": "e445",
+      "valorTotal": 16755,
+      "idUser": "87c5",
+      "itens": [
         {
           "idProduto": "6dfa",
           "quantidade": 3

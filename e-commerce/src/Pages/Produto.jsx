@@ -59,7 +59,7 @@ const Produto = () => {
         alert('Produto já adicionado ao carrinho');
       }
       setLoading(false);
-    }, 800);
+    }, 400);
   }
 
   return (
